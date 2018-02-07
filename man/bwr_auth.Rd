@@ -4,7 +4,7 @@
 \alias{bwr_auth}
 \title{Authenticated with the Brandwatch API}
 \usage{
-bwr_auth(un, pw, refresh = FALSE, cache = TRUE)
+bwr_auth(un = NULL, pw = NULL, refresh = FALSE, cache = TRUE)
 }
 \arguments{
 \item{un}{Your Brandwatch Username}

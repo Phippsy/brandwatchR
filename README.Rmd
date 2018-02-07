@@ -32,4 +32,35 @@ head(my_projects)
 ```
 
 This will display a data frame of project information including project ID, description, creation date and more.
-[Brandwatch documentation for more info](https://developers.brandwatch.com/docs/retrieving-projects)
+
+Read the [Brandwatch documentation for more info](https://developers.brandwatch.com/docs/retrieving-projects)
+
+
+## Get queries for a project
+
+Once you have a project ID, you can find out all the available queries in your environment. Do this using the `bwr_get_queries()` function:
+
+```{r}
+# We arbitrarily pull the first available project ID
+my_project <- bwr_get_projects()$id[1]
+
+# Get list of queries for this project ID
+my_query <- bwr_get_queries(project_id = my_project)
+```
+
+This will return a data frame showing you the ID, name, created date and similar metadata for the queries in the specified project.
+
+## Get mentions for a query
+
+Finally, the fun stuff - we can now request all mentions for a given query, using a specified date range. We achieve that using the `bwr_get_mentions()` function.
+
+```{r}
+my_mentions <- bwr_get_mentions(
+  project_id = my_project,
+  query_id = my_query,
+  date_range = c("2018-01-01", "2018-02-01"))
+```
+
+This will return a data frame containing the mentions for your specified query. Brandwatch returns a *ton* of fields in the API response, so it's likely that you'll want to slim down the resulting data frame by using `dplyr`'s `select()` function or similar.
+
+You can find information about the mention field definitions within [Brandwatch's API documentation](https://developers.brandwatch.com/docs/mention-metadata-field-definitions).
