@@ -2,7 +2,13 @@
 
 An API wrapper package for the [Brandwatch API](https://developers.brandwatch.com/docs/).
 
-Work in progress...
+If you're like me and you just want to get your hands on lots of lovely mention data, you do that by:
+
+- Authenticating with `bwr_auth()`
+- Working out the project id you need with `bwr_get_projects()`
+- Working out the id of the query you want results for with `bwr_get_queries()`.
+
+From here, you can retrieve mentions data using `bwr_get_mentions()`, which takes the project ID and query ID as arguments.
 
 
 ## Install
