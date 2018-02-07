@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "3083723378",
+    "hash" : "715754895",
     "id" : "564EDF72",
-    "lastKnownWriteTime" : 1517994313,
-    "last_content_update" : 1517994313265,
+    "lastKnownWriteTime" : 1517998482,
+    "last_content_update" : 1517998482592,
     "path" : "C:/Users/donalp/Google Drive/Coding/R/Packages/brandwatchR/R/bwr_auth.R",
     "project_path" : "R/bwr_auth.R",
     "properties" : {
-        "cursorPosition" : "27,28",
-        "scrollLine" : "3"
+        "cursorPosition" : "20,41",
+        "scrollLine" : "0"
     },
     "relative_order" : 1,
     "source_on_save" : false,

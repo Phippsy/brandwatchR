@@ -18,7 +18,7 @@
 #'
 #' @examples
 #' bwr_auth(un = "mickey@mouse.com", pw = "itsasmallworld")
-bwr_auth <- function(un, pw, refresh = FALSE, cache = TRUE) {
+bwr_auth <- function(un = NULL, pw = NULL, refresh = FALSE, cache = TRUE) {
   if ( refresh | !file.exists(".bw_token") ) {
     token_url <- paste0("https://newapi.brandwatch.com/oauth/token?",
                           "username=", un,
