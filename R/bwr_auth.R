@@ -1,4 +1,4 @@
-#' Authenticated with the Brandwatch API
+#' Authenticate with the Brandwatch API
 #'
 #' @param un
 #' Your Brandwatch Username
@@ -9,7 +9,7 @@
 #' If no token is available, or the refresh argument is TRUE, a new token will be downloaded and cached from the API.
 #'
 #' @param write_cache
-#' (Boolean) Can the token be locally cached.
+#' (Boolean) Can the token be locally cached?
 #' If TRUE, the token will be cached in the current working directory in '.bw_token'.
 #' If FALSE, the token will be not be cached locally but will be available for the current R session.
 #'
@@ -20,7 +20,7 @@
 #' bwr_auth(un = "mickey@mouse.com", pw = "itsasmallworld")
 bwr_auth <- function(un = NULL, pw = NULL, refresh = FALSE, cache = TRUE) {
   if ( refresh | !file.exists(".bw_token") ) {
-    token_url <- paste0("https://newapi.brandwatch.com/oauth/token?",
+    token_url <- paste0("https://api.brandwatch.com/oauth/token?",
                           "username=", un,
                           "&grant_type=api-password&client_id=brandwatch-api-client",
                           "&password=", URLencode(pw))

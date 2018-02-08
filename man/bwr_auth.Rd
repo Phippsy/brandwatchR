@@ -2,7 +2,7 @@
 % Please edit documentation in R/bwr_auth.R
 \name{bwr_auth}
 \alias{bwr_auth}
-\title{Authenticated with the Brandwatch API}
+\title{Authenticate with the Brandwatch API}
 \usage{
 bwr_auth(un = NULL, pw = NULL, refresh = FALSE, cache = TRUE)
 }
@@ -14,12 +14,12 @@ bwr_auth(un = NULL, pw = NULL, refresh = FALSE, cache = TRUE)
 \item{refresh}{(Boolean) Should the token be refreshed? If no, a token will be read from a locally cached file '.bw_token' if this file is available.
 If no token is available, or the refresh argument is TRUE, a new token will be downloaded and cached from the API.}
 
-\item{write_cache}{(Boolean) Can the token be locally cached.
+\item{write_cache}{(Boolean) Can the token be locally cached?
 If TRUE, the token will be cached in the current working directory in '.bw_token'.
 If FALSE, the token will be not be cached locally but will be available for the current R session.}
 }
 \description{
-Authenticated with the Brandwatch API
+Authenticate with the Brandwatch API
 }
 \examples{
 bwr_auth(un = "mickey@mouse.com", pw = "itsasmallworld")
