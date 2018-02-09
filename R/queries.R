@@ -92,8 +92,8 @@ bwr_query_check <- function(token = Sys.getenv("BW_TOKEN"),
 #' @export
 #'
 #' @examples
-#' bwr_query_upload(project_id = 12423432, samplePercent = 50, includedTerms = "at_mentions:mickeymouse", name = "Sample API query")
-bwr_query_upload <- function(token = Sys.getenv("BW_TOKEN"),
+#' bwr_query_create(project_id = 12423432, samplePercent = 50, includedTerms = "at_mentions:mickeymouse", name = "Sample API query")
+bwr_query_create <- function(token = Sys.getenv("BW_TOKEN"),
                              project_id = NULL,
                              type = "search string",
                              languageAgnostic = FALSE,

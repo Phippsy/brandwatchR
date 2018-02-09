@@ -86,7 +86,7 @@ You can find information about the mention field definitions within [Brandwatch'
 
 - `bwr_query_get()` - get a dataframe of queries for a project
 - `bwr_query_check()` - check the syntax of a query 
-- `bwr_query_upload()` - upload a new query
+- `bwr_query_create()` - upload a new query
 - `bwr_query_delete()` - delete a specified query
 - `bwr_mentions_get()` - get the mentions for a specified query
 
@@ -94,3 +94,14 @@ You can find information about the mention field definitions within [Brandwatch'
 
 - `bwr_querygrp_get()` - get the query groups for a specified project
 - `bwr_querygrp_delete()` - delete a specfied query group
+
+#### Tags 
+
+- `bwr_tag_get()` - get the tags for a specified project
+- `bwr_tag_create()`  - create a new tag for a specified project
+- `bwr_tag_delete()` - delete a tag for a specified project
+
+#### Categories
+
+- `bwr_cat_get()` - get the categories for a specified project
+- `bwr_cat_create()`  - create a new category for a specified project
