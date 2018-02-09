@@ -70,3 +70,24 @@ my_mentions <- bwr_get_mentions(
 This will return a data frame containing the mentions for your specified query. Brandwatch returns a *ton* of fields in the API response, so it's likely that you'll want to slim down the resulting data frame by using `dplyr`'s `select()` function or similar.
 
 You can find information about the mention field definitions within [Brandwatch's API documentation](https://developers.brandwatch.com/docs/mention-metadata-field-definitions).
+
+
+## All functions currently available
+
+### Authentication
+- `bwr_auth()` authenticate
+
+### Projects
+`bwr_projects_get()`- get a dataframe of projects
+
+### Queries / mentions
+`bwr_query_get()` - get a dataframe of queries for a project
+`bwr_query_check()` - check the syntax of a query 
+`bwr_query_upload()` - upload a new query
+`bwr_query_delete()` - delete a specified query
+`bwr_get_mentions()` - get the mentions for a specified query
+
+### Query Groups
+`bwr_querygrp_get()` - get the query groups for a specified project
+`bwr_querygrp_delete()` - delete a specfied query group
+```
