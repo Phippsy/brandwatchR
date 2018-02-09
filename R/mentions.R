@@ -19,12 +19,12 @@
 #' @examples
 #' my_project <- bwr_get_projects()$id[1]
 #' my_query <- bwr_get_queries(project_id = my_project)$id[1]
-#' my_mentions <- bwr_get_mentions(
+#' my_mentions <- bwr_mentions_get(
 #' project_id = my_project,
 #' query_id = my_query,
 #' date_range = c("2018-01-01", "2018-02-01"))
 #'
-bwr_get_mentions <- function(token = Sys.getenv("BW_TOKEN"),
+bwr_mentions_get <- function(token = Sys.getenv("BW_TOKEN"),
                              project_id = NULL,
                             query_id = NULL,
                             date_range = c(Sys.Date()-31, Sys.Date()-1),

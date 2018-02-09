@@ -139,4 +139,216 @@ Untracked files:[0K
 [0K
 [0K[?25h[?25l
 [0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0K[?25lt[0K[5G[?25h[6G[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add -[0K[?25hA[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0K[?25lt[0K[5G[?25h[6G[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add -[0K[?25hA[0K[?25l
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/C4A92BD7/pcs/source-pane.pper.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/C4A92BD7/pcs/workbench-pane.pper.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/C4A92BD7/persistent-state.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/C4A92BD7/sources/prop/9B6FBB9.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/C4A92BD7/sources/prop/B95A67D6.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/C4A92BD7/sources/prop/INDEX.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/shared/notebooks/paths.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25hA[0Kd[0Kd[0K[22G[?25l$ git commit -m "Add q[0K[?25hu[0Ke[0Kr[0Ky[0K[?25l$ git commit -m "Add quer[0K[?25h[?25l$ git commit -m "Add que[0K[?25h[?25l$ git commit -m "Add qu[0K[?25h[?25l$ git commit -m "Add q[0K[?25h[?25l$ git commit -m "Add[0K[22G[?25h[?25l$ git commit -m "Add b[0K[?25hw[0Kr[0K_[0Kg[0Kr[0K[?25l$ git commit -m "Add bwr_g[0K[?25h[?25l$ git commit -m "Add bwr_[0K[?25hq[0Ku[0Ke[0Kr[0Ky[0Kg[0Kr[0Kp[0K[35G[?25l$ git commit -m "Add bwr_querygrp f[0K[?25ha[0Km[0Ki[0Kl[0Ky[0K[42G[?25l$ git commit -m "Add bwr_querygrp family o[0K[?25hf[0K[45G[?25l$ git commit -m "Add bwr_querygrp family of f[0K[?25hu[0Kn[0Kc[0Kt[0Ki[0Kon[0Ks[0K[55G[?25l$ git commit -m "Add bwr_querygrp family of functions a[0K[?25hn[0Kd[0K[59G[?25l$ git commit -m "Add bwr_querygrp family of functions and b[0K[59G[?25h[60G[?25l$ git commit -m "Add bwr_querygrp family of functions and bw[0K[?25hr[0K_[0Kq[0Ku[0Ke[0Kr[0Ky[0K_[0KD[0Ke[0Kl[0Ke[0Kt[0Ke[0K[?25l$ git commit -m "Add bwr_querygrp family of functions and bwr_query_Delet[0K[?25h[?25l$ git commit -m "Add bwr_querygrp family of functions and bwr_query_Dele[0K[?25h[?25l$ git commit -m "Add bwr_querygrp family of functions and bwr_query_Del[0K[?25h[?25l$ git commit -m "Add bwr_querygrp family of functions and bwr_query_De[0K[?25h[?25l$ git commit -m "Add bwr_querygrp family of functions and bwr_query_D[0K[?25h[?25l$ git commit -m "Add bwr_querygrp family of functions and bwr_query_[0K[?25hd[0Kd[0Kl[0K[?25l$ git commit -m "Add bwr_querygrp family of functions and bwr_query_dd[0K[?25h[?25l$ git commit -m "Add bwr_querygrp family of functions and bwr_query_d[0K[?25he[0Kl[0Ke[0Kt[0Ke[0K([0K)[0K[78G[?25l$ git commit -m "Add bwr_querygrp family of functions and bwr_query_delete() f[0K[?25hu[0Kn[0Kc[0Kt[0Ki[0Ko[0Kn[0K.[0K"[0K[?25l
+[0K[?25h[master cba3a11] Add bwr_querygrp family of functions and bwr_query_delete() function.[0K[?25l
+ Committer: Donal Phipps <donalp@spark44.local>[0K
+Your name and email address were configured automatically based[0K
+on your username and hostname. Please check that they are accurate.[0K
+You can suppress this message by setting them explicitly. Run the[0K
+following command and follow the instructions in your editor to edit[0K
+your configuration file:[0K
+[0K
+    git config --global --edit[0K
+[0K
+After doing this, you may fix the identity used for this commit with:[0K
+[0K
+    git commit --amend --reset-author[0K
+[0K
+ 33 files changed, 640 insertions(+), 426 deletions(-)[0K
+ delete mode 100644 .DS_Store[0K
+ rewrite .Rproj.user/C4A92BD7/console06/INDEX001 (86%)[0K
+ rewrite .Rproj.user/C4A92BD7/persistent-state (60%)[0K
+ delete mode 100644 .Rproj.user/C4A92BD7/sources/per/t/564EDF72[0K
+ delete mode 100644 .Rproj.user/C4A92BD7/sources/per/t/564EDF72-contents[0K
+ delete mode 100644 .Rproj.user/C4A92BD7/sources/per/t/6CFA3F01[0K
+ rewrite .Rproj.user/shared/notebooks/paths (100%)[0K
+ delete mode 100644 R/.DS_Store[0K
+ delete mode 100644 R/bwr_check_query.R[0K
+ delete mode 100644 R/bwr_get_projects.R[0K
+ delete mode 100644 R/gwr_get_queries.R[0K
+ rename .Rproj.user/C4A92BD7/sources/per/t/6CFA3F01-contents => R/projects.R (94%)[0K
+ create mode 100644 R/queries.R[0K
+ create mode 100644 R/querygroups.R[0K
+ rename man/{bwr_get_projects.Rd => bwr_projects_get.Rd} (83%)[0K
+ rename man/{bwr_check_query.Rd => bwr_query_check.Rd} (63%)[0K
+ create mode 100644 man/bwr_query_delete.Rd[0K
+ rename man/{bwr_get_queries.Rd => bwr_query_get.Rd} (80%)[0K
+ rename man/{bwr_upload_query.Rd => bwr_query_upload.Rd} (83%)[0K
+ create mode 100644 man/bwr_querygrp_delete.Rd[0K
+ create mode 100644 man/bwr_querygrp_get.Rd[0K
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[13G[?25l$ git commi[0K[?25h[?25l$ git comm[0K[?25h[?25l$ git com[0K[?25h[?25l$ git co[0K[?25h[?25l$ git c[0K[?25h[?25l$ git[0K[7G[?25h[?25l$ git s[0K[?25ht[0Ka[0Kt[0Ku[0Ks[0K[?25l
+[0K[?25hOn branch master[0K[?25l
+Your branch is ahead of 'origin/master' by 1 commit.[0K
+  (use "git push" to publish your local commits)[0K
+Changes not staged for commit:[0K
+  (use "git add <file>..." to update what will be committed)[0K
+  (use "git checkout -- <file>..." to discard changes in working directory)[0K
+[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/console06/7869448F[0m[0K
+[0K
+no changes added to commit (use "git add" and/or "git commit -a")[0K
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push -[0K[?25hu[0K[15G[?25l$ git push -u o[0K[?25hr[0Ki[0Kg[0Kn[0K[21G[?25l$ git push -u orign m[0K[?25ha[0Ks[0Kt[0K[?25l$ git push -u orign mas[0K[?25h[?25l$ git push -u orign ma[0K[?25h[?25l$ git push -u orign m[0K[?25h[?25l$ git push -u orign[0K[21G[?25h[20G[?25l$ git push -u orig[0K[?25hi[0Kn[0K[22G[?25l$ git push -u origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hCounting objects: 37, done.[0K[?25l
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (34/34), done.[0K
+Writing objects:  40% (15/37)[0K[1G[?25hWriting objects: 100% (37/37), 11.02 KiB | 0 bytes/s, done.[0K[?25l
+Total 37 (delta 9), reused 0 (delta 0)[0K
+[0K[?25h[?25lremote: Resolving deltas:  33% (3/9)[0K[1G[?25hremote: Resolving deltas: 100% (9/9), completed with 9 local objects.[0K[?25l
+[0K[?25hTo https://github.com/Phippsy/brandwatchR.git[0K[?25l
+   658eba8..cba3a11  master -> master[0K
+[0K[?25hBranch master set up to track remote branch master from origin.[0K[?25l
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add -[0K[?25hR[0KE[0KA[0KD[0KM[0KE[0K.[0KR[0Km[0Kd[0K[?25l
+[0K[?25herror: unknown switch `R'[0K[?25l
+usage: git add [<options>] [--] <pathspec>...[0K
+[0K
+    -n, --dry-run         dry run[0K
+    -v, --verbose         be verbose[0K
+[0K
+    -i, --interactive     interactive picking[0K
+    -p, --patch           select hunks interactively[0K
+    -e, --edit            edit current diff and apply[0K
+    -f, --force           allow adding otherwise ignored files[0K
+    -u, --update          update tracked files[0K
+    -N, --intent-to-add   record only the fact that the path will be added later[0K
+    -A, --all             add changes from all tracked and untracked files[0K
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)[0K
+    --refresh             don't add, only refresh the index[0K
+    --ignore-errors       just skip files which cannot be added because of errors[0K
+    --ignore-missing      check if - even missing - files are ignored in dry run[0K
+    --chmod <(+/-)x>      override the executable bit of the listed files[0K
+[0K
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add R[0K[?25hE[0KA[0KD[0KM[0KE[0K.[0KR[0Km[0Kd[0K[?25l
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git s[0K[?25ht[0Ka[0Kt[0Ku[0Ks[0K[?25l
+[0K[?25hOn branch master[0K[?25l
+Your branch is up-to-date with 'origin/master'.[0K
+Changes to be committed:[0K
+  (use "git reset HEAD <file>..." to unstage)[0K
+[0K
+        [0;32mmodified:   README.Rmd[0m[0K
+[0K
+Changes not staged for commit:[0K
+  (use "git add <file>..." to update what will be committed)[0K
+  (use "git checkout -- <file>..." to discard changes in working directory)[0K
+[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/console06/7869448F[0m[0K
+[0K
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git d[0K[?25h[?25l$ git[0K[7G[?25h[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25hU[0Kp[0Kd[0Ka[0Kt[0Ke[0Kd[0K[?25l$ git commit -m "Update[0K[?25h[25G[?25l$ git commit -m "Update RE[0K[?25hA[0KD[0KM[0KE[0K![0K[?25l$ git commit -m "Update README[0K[32G[?25h[31G[?25l$ git commit -m "Update README"[0K[?25h[?25l
+[0K[?25h[master a029a06] Update README[0K[?25l
+ Committer: Donal Phipps <donalp@spark44.local>[0K
+Your name and email address were configured automatically based[0K
+on your username and hostname. Please check that they are accurate.[0K
+You can suppress this message by setting them explicitly. Run the[0K
+following command and follow the instructions in your editor to edit[0K
+your configuration file:[0K
+[0K
+    git config --global --edit[0K
+[0K
+After doing this, you may fix the identity used for this commit with:[0K
+[0K
+    git commit --amend --reset-author[0K
+[0K
+ 1 file changed, 21 insertions(+)[0K
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push -[0K[?25hu[0K[15G[?25l$ git push -u o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[22G[?25l$ git push -u origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hCounting objects: 3, done.[0K[?25l
+Delta compression using up to 4 threads.[0K
+Compressing objects:  33% (1/3)[0K[1G[?25hCompressing objects: 100% (3/3), done.[0K[?25l
+Writing objects: 100% (3/3), 555 bytes | 0 bytes/s, done.[0K
+Total 3 (delta 2), reused 0 (delta 0)[0K
+[0K[?25hremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[0K[?25l
+[0K[?25hTo https://github.com/Phippsy/brandwatchR.git[0K[?25l
+   cba3a11..a029a06  master -> master[0K
+[0K[?25hBranch master set up to track remote branch master from origin.[0K[?25l
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add -[0K[?25hR[0KE[0KA[0K[?25l$ git add -RE[0K[?25h[?25l$ git add -R[0K[?25h[?25l$ git add -[0K[?25h[?25l$ git add[0K[11G[?25h[?25l$ git add R[0K[?25hE[0KA[0KD[0KM[0KE[0K.[0KR[0Km[0Kd[0K[?25l
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push -[0K[?25hu[0K[15G[?25l$ git push -u o[0K[?25hr[0Ki[0Kg[0K[?25l$ git push -u ori[0K[?25h[?25l$ git push -u or[0K[?25h[?25l$ git push -u o[0K[?25h[?25l$ git push -u[0K[15G[?25h[14G[?25l$ git push -[0K[?25h[?25l$ git push[0K[12G[?25h[11G[?25l$ git pus[0K[11G[?25h[10G[?25l$ git pu[0K[?25h[?25l$ git p[0K[?25h[?25l$ git[0K[7G[?25h[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25hu[0Kp[0Kd[0Ka[0Kt[0Ke[0K[25G[?25l$ git commit -m "update R[0K[?25hE[0KA[0KD[0KM[0KE[0K"[0K[?25l
+[0K[?25h[master f1f4135] update README[0K[?25l
+ Committer: Donal Phipps <donalp@spark44.local>[0K
+Your name and email address were configured automatically based[0K
+on your username and hostname. Please check that they are accurate.[0K
+You can suppress this message by setting them explicitly. Run the[0K
+following command and follow the instructions in your editor to edit[0K
+your configuration file:[0K
+[0K
+    git config --global --edit[0K
+[0K
+After doing this, you may fix the identity used for this commit with:[0K
+[0K
+    git commit --amend --reset-author[0K
+[0K
+ 1 file changed, 16 insertions(+), 13 deletions(-)[0K
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push -[0K[?25hu[0K[15G[?25l$ git push -u o[0K[?25h[?25lr[0K[16G[?25h[17G[?25l$ git push -u ori[0K[?25hg[0Kn[0Ki[0K[22G[?25l$ git push -u origni m[0K[?25has[0Kt[0K[?25l$ git push -u origni mas[0K[?25h[?25l$ git push -u origni ma[0K[?25h[?25l$ git push -u origni m[0K[24G[?25h[23G[?25l$ git push -u origni[0K[22G[?25h[21G[?25l$ git push -u orign[0K[?25h[?25l$ git push -u orig[0K[20G[?25h[19G[?25l$ git push -u ori[0K[?25hg[0Ki[0Kn[0K[22G[?25l$ git push -u origin m[0K[?25has[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hCounting objects: 3, done.[0K[?25l
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (3/3), done.[0K
+Writing objects: 100% (3/3), 396 bytes | 0 bytes/s, done.[0K
+Total 3 (delta 2), reused 0 (delta 0)[0K
+[0K[?25hremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[0K[?25l
+[0K[?25hTo https://github.com/Phippsy/brandwatchR.git[0K[?25l
+   a029a06..f1f4135  master -> master[0K
+Branch master set up to track remote branch master from origin.[0K
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+]0;:/c/Users/donalp/Google Drive/Coding/R/Packages/brandwatchR[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git s[0K[?25ht[0Ka[0Kt[0Ku[0Ks[0K[?25l
+[0K[?25hOn branch master[0K[?25l
+Your branch is up-to-date with 'origin/master'.[0K
+Changes not staged for commit:[0K
+  (use "git add/rm <file>..." to update what will be committed)[0K
+  (use "git checkout -- <file>..." to discard changes in working directory)[0K
+[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/console06/7869448F[0m[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/console06/INDEX001[0m[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/pcs/source-pane.pper[0m[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/persistent-state[0m[0K
+        [0;31mdeleted:    R/bwr_get_mentions.R[0m[0K
+        [0;31mmodified:   README.Rmd[0m[0K
+        [0;31mdeleted:    man/bwr_get_mentions.Rd[0m[0K
+[0K
+Untracked files:[0K
+  (use "git add <file>..." to include in what will be committed)[0K
+[0K
+        [0;31mR/mentions.R[0m[0K
+        [0;31mman/bwr_mentions_get.Rd[0m[0K
+[0K
+no changes added to commit (use "git add" and/or "git commit -a")[0K
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add -[0K[?25hA[0K[?25l
+[0K[?25h

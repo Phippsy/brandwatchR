@@ -88,7 +88,7 @@ You can find information about the mention field definitions within [Brandwatch'
 - `bwr_query_check()` - check the syntax of a query 
 - `bwr_query_upload()` - upload a new query
 - `bwr_query_delete()` - delete a specified query
-- `bwr_get_mentions()` - get the mentions for a specified query
+- `bwr_mentions_get()` - get the mentions for a specified query
 
 #### Query Groups
 
