@@ -89,8 +89,16 @@ You can find information about the mention field definitions within [Brandwatch'
 - `bwr_query_create()` - upload a new query
 - `bwr_query_delete()` - delete a specified query
 - `bwr_mentions_get()` - get the mentions for a specified query
+- `bwr_mentions_total()` - get the total number of mentions for a specified query or query group.
+- `bwr_mentions_topics()` - get the matching topics & topic metadata for a specified query or query group.
+- `bwr_mentions_topsites()` - get the top authors for a specified query or query group.
+- `bwr_mentions_toptweeters()` - get the top tweeters for a specified query or query group.
 
-#### Query Groups
+##### Query filters
+- `bwr_filters_get()` - Get a data frame of all parameters which can be used to filter your query
+- `bwr_metrics_get()` - Get a data frame of all metrics which have limited accepted values.
+
+##### Query Groups
 
 - `bwr_querygrp_get()` - get the query groups for a specified project
 - `bwr_querygrp_delete()` - delete a specfied query group

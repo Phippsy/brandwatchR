@@ -17,8 +17,7 @@ bwr_querygrp_get <- function(token = Sys.getenv("BW_TOKEN"),
                 project_id,
                 "/querygroups")
   r <- httr::GET(url,
-                 query = list(access_token = token,
-                              type = type))
+                 query = list(access_token = token))
   httr::stop_for_status(r)
 
   # Parse the results and return

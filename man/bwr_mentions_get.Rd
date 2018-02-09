@@ -5,8 +5,8 @@
 \title{Get a list of mentions for the specified query and project}
 \usage{
 bwr_mentions_get(token = Sys.getenv("BW_TOKEN"), project_id = NULL,
-  query_id = NULL, date_range = c(Sys.Date() - 31, Sys.Date() - 1),
-  page = NULL)
+  query_id = NULL, filters = NULL, date_range = c(Sys.Date() - 31,
+  Sys.Date() - 1), page = NULL)
 }
 \arguments{
 \item{token}{The authentication token, acquired using bwr_auth()}
@@ -14,6 +14,8 @@ bwr_mentions_get(token = Sys.getenv("BW_TOKEN"), project_id = NULL,
 \item{project_id}{The project id in which the specified query is contained. Obtain a list of project IDs using bwr_get_projects().}
 
 \item{query_id}{The id of the query you'd like to run. Obtain a list of queries for any specified project using bwr_get_queries().}
+
+\item{filters}{(Optional) A list of key-value pairs to filter the mentions query by. Use the bwr_filters_get() function to find out all available filters.}
 
 \item{date_range}{A character vector containing 2 date values in YYYY-mm-dd format. The first value is the beginning of your desired date range and the second value is the end of the date range.}
 
