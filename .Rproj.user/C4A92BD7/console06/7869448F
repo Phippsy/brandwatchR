@@ -166,4 +166,78 @@ no changes added to commit (use "git add" and/or "git commit -a")[0K
 [0K[?25h[?25l
 [0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
 $[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add -[0K[?25hA[0K[?25l
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/C4A92BD7/pcs/files-pane.pper.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/C4A92BD7/pcs/source-pane.pper.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/C4A92BD7/pcs/windowlayoutstate.pper.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/C4A92BD7/pcs/workbench-pane.pper.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/C4A92BD7/sources/prop/9B6FBB9.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/C4A92BD7/sources/prop/INDEX.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/shared/notebooks/paths.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25hA[0Kd[0Kd[0K[22G[?25l$ git commit -m "Add l[0K[?25h[?25l$ git commit -m "Add[0K[22G[?25h[?25l$ git commit -m "Add f[0K[?25hi[0Kl[0Kt[0Ke[0Kr[0Ks[0K[30G[?25l$ git commit -m "Add filters f[0K[?25ha[0Km[0Ki[0Kl[0Ky[0K[37G[36G[?25l$ git commit -m "Add filters famil[0K[?25h[?25l$ git commit -m "Add filters fami[0K[?25hl[0Ky[0K[37G[?25l$ git commit -m "Add filters family o[0K[?25hf[0K[40G[?25l$ git commit -m "Add filters family of f[0K[?25hu[0Kn[0Kc[0Kt[0Ki[0Ko[0Kn[0Ks[0K,[0K[51G[?25l$ git commit -m "Add filters family of functions, m[0K[?25ha[0Kn[0Ky[0K[56G[?25l$ git commit -m "Add filters family of functions, many m[0K[?25he[0Kt[0Kn[0Ki[0Ko[0Kn[0Ks[0K[?25l$ git commit -m "Add filters family of functions, many metnion[0K[?25h[?25l$ git commit -m "Add filters family of functions, many metnio[0K[?25h[?25l$ git commit -m "Add filters family of functions, many metni[0K[?25h[?25l$ git commit -m "Add filters family of functions, many metn[0K[61G[?25h[60G[?25l$ git commit -m "Add filters family of functions, many met[0K[60G[?25h[59G[?25l$ git commit -m "Add filters family of functions, many me[0K[?25h[?25l$ git commit -m "Add filters family of functions, many m[0K[?25h[?25l$ git commit -m "Add filters family of functions, many[0K[56G[?25h[?25l$ git commit -m "Add filters family of functions, many b[0K[?25hw[0Kr[0K_[0K[?25lm[0K[60G[?25h[61G[?25l$ git commit -m "Add filters family of functions, many bwr_me[0K[?25hn[0Kt[0Ki[0Ko[0Kn[0Ks[0K_[0K[70G[?25l$ git commit -m "Add filters family of functions, many bwr_mentions_ f[0K[?25hu[0Kn[0Kc[0Kt[0Ki[0Kon[0K[?25ls[0K[78G[?25h[79G[80G[?25l$ git commit -m "Add filters family of functions, many bwr_mentions_ functions i[0K[?25hn[0Kc[0K.[0K[85G[?25l$ git commit -m "Add filters family of functions, many bwr_mentions_ functions inc. t[0K[?25hw[0K[?25l$ git commit -m "Add filters family of functions, many bwr_mentions_ functions inc. t[0K[?25ho[0Kp[0Kt[0Kw[0Ke[0Ke[0Kt[0Ke[0Kr[0Ks[0K,[0K[98G[?25l$ git commit -m "Add filters family of functions, many bwr_mentions_ functions inc. toptweeters, t[0K[?25ho[0Kp[0Ka[0Ku[0Kt[0Kh[0Ko[0Kr[0Ks[0K,[0K[110G[?25l$ git commit -m "Add filters family of functions, many bwr_mentions_ functions inc. toptweeters, topauthors, t[0K[?25ho[0Kt[0K[?25la[0K[113G[?25h[114G[?25l$ git commit -m "Add filters family of functions, many bwr_mentions_ functions inc. toptweeters, topauthors, total[0K[?25hs[0K,[0K[118G[?25l$ git commit -m "Add filters family of functions, many bwr_mentions_ functions inc. toptweeters, topauthors, totals, t[0K
+[0K[?25hopi[0Kc[0Ks[0K"[0K[?25l
+[0K[?25h[master 57fe7b7] Add filters family of functions, many bwr_mentions_ functions inc. toptweeters, topauthors, totals, t[0Ko[?25l
+pics[0K
+ Committer: Donal Phipps <donalp@spark44.local>[0K
+Your name and email address were configured automatically based[0K
+on your username and hostname. Please check that they are accurate.[0K
+You can suppress this message by setting them explicitly. Run the[0K
+following command and follow the instructions in your editor to edit[0K
+your configuration file:[0K
+[0K
+    git config --global --edit[0K
+[0K
+After doing this, you may fix the identity used for this commit with:[0K
+[0K
+    git commit --amend --reset-author[0K
+[0K
+ 24 files changed, 814 insertions(+), 16 deletions(-)[0K
+ rewrite .Rproj.user/C4A92BD7/console06/INDEX001 (86%)[0K
+ create mode 100644 R/filters.R[0K
+ create mode 100644 R/topics.R[0K
+ create mode 100644 R/workflow.R[0K
+ create mode 100644 man/bwr_filters_get.Rd[0K
+ create mode 100644 man/bwr_mentions_topauthors.Rd[0K
+ create mode 100644 man/bwr_mentions_topics.Rd[0K
+ create mode 100644 man/bwr_mentions_topsites.Rd[0K
+ create mode 100644 man/bwr_mentions_toptweeters.Rd[0K
+ create mode 100644 man/bwr_mentions_total.Rd[0K
+ create mode 100644 man/bwr_metrics_get.Rd[0K
+ create mode 100644 man/bwr_wf_get.Rd[0K
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git s[0K[?25ht[0Ka[0Kt[0Ku[0Ks[0K[?25l
+[0K[?25hOn branch master[0K[?25l
+Your branch is ahead of 'origin/master' by 1 commit.[0K
+  (use "git push" to publish your local commits)[0K
+Changes not staged for commit:[0K
+  (use "git add <file>..." to update what will be committed)[0K
+  (use "git checkout -- <file>..." to discard changes in working directory)[0K
+[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/console06/7869448F[0m[0K
+[0K
+no changes added to commit (use "git add" and/or "git commit -a")[0K
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push -[0K[?25hu[0K[15G[?25l$ git push -u o[0K[?25hr[0K[?25li[0K[17G[?25h[18G[?25l$ git push -u orig[0K[?25hi[0Kn[0K[22G[?25l$ git push -u origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hCounting objects: 35, done.[0K[?25l
+Delta compression using up to 4 threads.[0K
+Compressing objects:  18% (6/32)[0K[1G[?25hCompressing objects: 100% (32/32), done.[0K[?25l
+[0K[?25hWriting objects: 100% (35/35), 10.08 KiB | 0 bytes/s, done.[0K[?25l
+Total 35 (delta 20), reused 0 (delta 0)[0K
+[0K[?25h[?25lremote: Resolving deltas:  45% (9/20)[0K[1G[?25hremote: Resolving deltas: 100% (20/20), completed with 14 local objects.[0K[?25l
+[0K[?25hTo https://github.com/Phippsy/brandwatchR.git[0K[?25l
+   5e49947..57fe7b7  master -> master[0K
+[0K[?25hBranch master set up to track remote branch master from origin.[0K[?25l
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add -[0K[?25hA[0K[?25l
 [0K[?25h

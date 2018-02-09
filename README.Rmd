@@ -33,7 +33,7 @@ bwr_auth(username = "your@username.com",
 ## Get project info
 
 ```{r}
-my_projects <- bwr_get_projects()
+my_projects <- bwr_projects_get()
 head(my_projects)
 ```
 
@@ -44,14 +44,14 @@ Read the [Brandwatch documentation for more info](https://developers.brandwatch.
 
 ## Get queries for a project
 
-Once you have a project ID, you can find out all the available queries in your environment. Do this using the `bwr_get_queries()` function:
+Once you have a project ID, you can find out all the available queries in your environment. Do this using the `bwr_query_get()` function:
 
 ```{r}
 # We arbitrarily pull the first available project ID
-my_project <- bwr_get_projects()$id[1]
+my_project <- bwr_projects_get()$id[1]
 
 # Get list of queries for this project ID
-my_query <- bwr_get_queries(project_id = my_project)
+my_query <- bwr_query_get(project_id = my_project)
 ```
 
 This will return a data frame showing you the ID, name, created date and similar metadata for the queries in the specified project.
@@ -61,7 +61,7 @@ This will return a data frame showing you the ID, name, created date and similar
 Finally, the fun stuff - we can now request all mentions for a given query, using a specified date range. We achieve that using the `bwr_get_mentions()` function.
 
 ```{r}
-my_mentions <- bwr_get_mentions(
+my_mentions <- bwr_mentions_get(
   project_id = my_project,
   query_id = my_query,
   date_range = c("2018-01-01", "2018-02-01"))
