@@ -18,6 +18,9 @@ If no token is available, or the refresh argument is TRUE, a new token will be d
 If TRUE, the token will be cached in the current working directory in '.bw_token'.
 If FALSE, the token will be not be cached locally but will be available for the current R session.}
 }
+\value{
+Your environment variable "BW_TOKEN" will be set to the value of your authentication token.
+}
 \description{
 Authenticate with the Brandwatch API
 }

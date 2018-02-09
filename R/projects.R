@@ -15,7 +15,7 @@
 #' my_projects <- bwr_get_projects(target = "summary")
 #'
 #' Read the Brandwatch documentation for this API call at https://developers.brandwatch.com/docs/retrieving-projects
-bwr_get_projects <- function(token = Sys.getenv("BW_TOKEN"),
+bwr_projects_get <- function(token = Sys.getenv("BW_TOKEN"),
                              target = NULL ) {
   url <- paste0("https://api.brandwatch.com/projects/",
                 target)

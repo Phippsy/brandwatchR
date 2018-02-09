@@ -14,6 +14,7 @@
 #' If FALSE, the token will be not be cached locally but will be available for the current R session.
 #'
 #' @return
+#' Your environment variable "BW_TOKEN" will be set to the value of your authentication token.
 #' @export
 #'
 #' @examples

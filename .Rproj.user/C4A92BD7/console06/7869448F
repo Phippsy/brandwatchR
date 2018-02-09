@@ -5,4 +5,138 @@ $[0K[3G[?25h[?25l[1A[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google 
 [0K[?25hfatal: Not a git repository (or any of the parent directories): .git[0K[?25l
 [0K[?25h[?25l
 [0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0m[0K
-$[0K[3G[?25h
+$[0K[3G[?25h[0m[0K]0;:/c/Users/donalp/Google Drive/Coding/R/Packages/brandwatchR[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+[?25l[1A[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0K
+[0m$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git s[0K[?25ht[0Ka[0Kt[0Ku[0Ks[0K[?25l
+[0K[?25hOn branch master[0K[?25l
+Your branch is up-to-date with 'origin/master'.[0K
+Changes to be committed:[0K
+  (use "git reset HEAD <file>..." to unstage)[0K
+[0K
+        [0;32mdeleted:    .DS_Store[0m[0K
+        [0;32mmodified:   .Rproj.user/shared/notebooks/paths[0m[0K
+        [0;32mmodified:   .gitignore[0m[0K
+        [0;32mdeleted:    R/.DS_Store[0m[0K
+        [0;32mdeleted:    R/.Rapp.history[0m[0K
+        [0;32mmodified:   R/bwr_auth.R[0m[0K
+        [0;32mdeleted:    R/bwr_check_query.R[0m[0K
+        [0;32mmodified:   R/bwr_get_mentions.R[0m[0K
+        [0;32mmodified:   R/bwr_get_projects.R[0m[0K
+        [0;32mmodified:   R/gwr_get_queries.R[0m[0K
+        [0;32mmodified:   README.Rmd[0m[0K
+        [0;32mmodified:   brandwatchR.Rproj[0m[0K
+        [0;32mmodified:   man/bwr_auth.Rd[0m[0K
+        [0;32mdeleted:    man/bwr_check_query.Rd[0m[0K
+        [0;32mdeleted:    man/bwr_upload_query.Rd[0m[0K
+[0K
+Changes not staged for commit:[0K
+  (use "git add/rm <file>..." to update what will be committed)[0K
+  (use "git checkout -- <file>..." to discard changes in working directory)[0K
+[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/console06/7869448F[0m[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/console06/INDEX001[0m[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/pcs/source-pane.pper[0m[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/pcs/workbench-pane.pper[0m[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/persistent-state[0m[0K
+        [0;31mdeleted:    .Rproj.user/C4A92BD7/sources/per/t/564EDF72[0m[0K
+        [0;31mdeleted:    .Rproj.user/C4A92BD7/sources/per/t/564EDF72-contents[0m[0K
+        [0;31mdeleted:    .Rproj.user/C4A92BD7/sources/per/t/6CFA3F01[0m[0K
+        [0;31mdeleted:    .Rproj.user/C4A92BD7/sources/per/t/6CFA3F01-contents[0m[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/sources/prop/9B6FBB9[0m[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/sources/prop/B95A67D6[0m[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/sources/prop/INDEX[0m[0K
+        [0;31mmodified:   .Rproj.user/shared/notebooks/paths[0m[0K
+        [0;31mmodified:   R/bwr_auth.R[0m[0K
+        [0;31mdeleted:    R/bwr_get_projects.R[0m[0K
+        [0;31mdeleted:    R/gwr_get_queries.R[0m[0K
+        [0;31mmodified:   man/bwr_auth.Rd[0m[0K
+        [0;31mdeleted:    man/bwr_get_projects.Rd[0m[0K
+        [0;31mdeleted:    man/bwr_get_queries.Rd[0m[0K
+[0K
+Untracked files:[0K
+  (use "git add <file>..." to include in what will be committed)[0K
+[0K
+        [0;31m.Rbuildignore (1)[0m[0K
+        [0;31m.Rhistory (1)[0m[0K
+        [0;31mDESCRIPTION (1)[0m[0K
+        [0;31mNAMESPACE (1)[0m[0K
+        [0;31mR/.Rapp.history[0m[0K
+        [0;31mR/projects.R[0m[0K
+        [0;31mR/queries.R[0m[0K
+        [0;31mR/querygroups.R[0m[0K
+        [0;31mbrandwatchR (1).Rproj[0m[0K
+        [0;31mman/bwr_projects_get.Rd[0m[0K
+        [0;31mman/bwr_query_check.Rd[0m[0K
+        [0;31mman/bwr_query_delete.Rd[0m[0K
+        [0;31mman/bwr_query_get.Rd[0m[0K
+        [0;31mman/bwr_query_upload.Rd[0m[0K
+        [0;31mman/bwr_querygrp_delete.Rd[0m[0K
+        [0;31mman/bwr_querygrp_get.Rd[0m[0K
+[0K
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add -[0K[?25hA[0K[?25l$ git add -[0K[?25h[?25l$ git add[0K[11G[?25h[10G[?25l$ git ad[0K[?25h[?25l$ git a[0K[?25h[?25l$ git[0K[7G[?25h[6G[?25l$ gi[0K[?25h[?25l$ g[0K[?25h[?25l$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git s[0K[?25ht[0Ka[0Kt[0Ku[0Ks[0K[?25l
+[0K[?25hOn branch master[0K[?25l
+Your branch is up-to-date with 'origin/master'.[0K
+Changes to be committed:[0K
+  (use "git reset HEAD <file>..." to unstage)[0K
+[0K
+        [0;32mdeleted:    .DS_Store[0m[0K
+        [0;32mmodified:   .Rproj.user/shared/notebooks/paths[0m[0K
+        [0;32mmodified:   .gitignore[0m[0K
+        [0;32mdeleted:    R/.DS_Store[0m[0K
+        [0;32mdeleted:    R/.Rapp.history[0m[0K
+        [0;32mmodified:   R/bwr_auth.R[0m[0K
+        [0;32mdeleted:    R/bwr_check_query.R[0m[0K
+        [0;32mmodified:   R/bwr_get_mentions.R[0m[0K
+        [0;32mmodified:   R/bwr_get_projects.R[0m[0K
+        [0;32mmodified:   R/gwr_get_queries.R[0m[0K
+        [0;32mmodified:   README.Rmd[0m[0K
+        [0;32mmodified:   brandwatchR.Rproj[0m[0K
+        [0;32mmodified:   man/bwr_auth.Rd[0m[0K
+        [0;32mdeleted:    man/bwr_check_query.Rd[0m[0K
+        [0;32mdeleted:    man/bwr_upload_query.Rd[0m[0K
+[0K
+Changes not staged for commit:[0K
+  (use "git add/rm <file>..." to update what will be committed)[0K
+  (use "git checkout -- <file>..." to discard changes in working directory)[0K
+[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/console06/7869448F[0m[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/console06/INDEX001[0m[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/pcs/source-pane.pper[0m[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/pcs/workbench-pane.pper[0m[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/persistent-state[0m[0K
+        [0;31mdeleted:    .Rproj.user/C4A92BD7/sources/per/t/564EDF72[0m[0K
+        [0;31mdeleted:    .Rproj.user/C4A92BD7/sources/per/t/564EDF72-contents[0m[0K
+        [0;31mdeleted:    .Rproj.user/C4A92BD7/sources/per/t/6CFA3F01[0m[0K
+        [0;31mdeleted:    .Rproj.user/C4A92BD7/sources/per/t/6CFA3F01-contents[0m[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/sources/prop/9B6FBB9[0m[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/sources/prop/B95A67D6[0m[0K
+        [0;31mmodified:   .Rproj.user/C4A92BD7/sources/prop/INDEX[0m[0K
+        [0;31mmodified:   .Rproj.user/shared/notebooks/paths[0m[0K
+        [0;31mmodified:   R/bwr_auth.R[0m[0K
+        [0;31mdeleted:    R/bwr_get_projects.R[0m[0K
+        [0;31mdeleted:    R/gwr_get_queries.R[0m[0K
+        [0;31mmodified:   man/bwr_auth.Rd[0m[0K
+        [0;31mdeleted:    man/bwr_get_projects.Rd[0m[0K
+        [0;31mdeleted:    man/bwr_get_queries.Rd[0m[0K
+[0K
+Untracked files:[0K
+  (use "git add <file>..." to include in what will be committed)[0K
+[0K
+        [0;31mR/.Rapp.history[0m[0K
+        [0;31mR/projects.R[0m[0K
+        [0;31mR/queries.R[0m[0K
+        [0;31mR/querygroups.R[0m[0K
+        [0;31mman/bwr_projects_get.Rd[0m[0K
+        [0;31mman/bwr_query_check.Rd[0m[0K
+        [0;31mman/bwr_query_delete.Rd[0m[0K
+        [0;31mman/bwr_query_get.Rd[0m[0K
+        [0;31mman/bwr_query_upload.Rd[0m[0K
+        [0;31mman/bwr_querygrp_delete.Rd[0m[0K
+        [0;31mman/bwr_querygrp_get.Rd[0m[0K
+[0K
+[0K[?25h[?25l
+[0;32mdonalp@ldns44-surface2 [0;35m [0;33m~/Google Drive/Coding/R/Packages/brandwatchR[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0K[?25lt[0K[5G[?25h[6G[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add -[0K[?25hA[0K
