@@ -15,7 +15,7 @@
 #' \dontrun{my_project <- bwr_get_projects()$id[1]
 #' my_workflow <- bwr_wf_get(project_id = my_project)}
 #'
-bwr_wf_get <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL) {
+bwr_wf_get <- function(project_id = NULL, token = Sys.getenv("BW_TOKEN")) {
 
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")

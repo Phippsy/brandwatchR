@@ -19,7 +19,7 @@
 #'
 #' @examples
 #' \dontrun{my_queries <- bwr_query_get(project_id = 12334534)}
-bwr_query_get <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL, type = NULL) {
+bwr_query_get <- function(project_id = NULL, type = NULL, token = Sys.getenv("BW_TOKEN")) {
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
         stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
@@ -51,7 +51,7 @@ bwr_query_get <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL, typ
 #'
 #' @examples
 #' \dontrun{any_issues <- bwr_query_check(query = list(query = 'at_mentions:huey', language = 'en'))}
-bwr_query_check <- function(token = Sys.getenv("BW_TOKEN"), query = list()) {
+bwr_query_check <- function(query = list(), token = Sys.getenv("BW_TOKEN")) {
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
         stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
@@ -102,8 +102,8 @@ bwr_query_check <- function(token = Sys.getenv("BW_TOKEN"), query = list()) {
 #'                  samplePercent = 50,
 #'                  includedTerms = 'at_mentions:mickeymouse',
 #'                  name = 'Sample API query')}
-bwr_query_create <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL, type = "search string", languageAgnostic = FALSE, samplePercent = 100,
-    languages = "en", includedTerms = NULL, name = NULL, description = "My API query", industry = "general") {
+bwr_query_create <- function(project_id = NULL, type = "search string", languageAgnostic = FALSE, samplePercent = 100,
+    languages = "en", includedTerms = NULL, name = NULL, description = "My API query", industry = "general", token = Sys.getenv("BW_TOKEN")) {
 
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
@@ -155,7 +155,7 @@ bwr_query_create <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL, 
 #'
 #' @examples
 #' \dontrun{bwr_query_delete(project_id = 122445, query_id = 23432424)}
-bwr_query_delete <- function(token = Sys.getenv("BW_TOKEN"), project_id, query_id) {
+bwr_query_delete <- function(project_id, query_id, token = Sys.getenv("BW_TOKEN")) {
 
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")

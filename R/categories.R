@@ -16,7 +16,7 @@
 #'
 #' @examples
 #' \dontrun{my_categories <- bwr_cat_get(project_id = 12334534))}
-bwr_cat_get <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL) {
+bwr_cat_get <- function(project_id = NULL, token = Sys.getenv("BW_TOKEN")) {
     if (length(token) != 1 || class(token) != "character")
         stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
     if (is.null(project_id))
@@ -56,7 +56,7 @@ bwr_cat_get <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL) {
 #'                name = 'Quick test cat',
 #'                children = list(list(name = 'category one', id = 234234),
 #'                  list(name = 'category 2')))}
-bwr_cat_create <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL, name = NULL, children = NULL) {
+bwr_cat_create <- function(project_id = NULL, name = NULL, children = NULL, token = Sys.getenv("BW_TOKEN")) {
 
     # Check correct args ------------------------------------------------------
     if (length(token) != 1 || class(token) != "character")

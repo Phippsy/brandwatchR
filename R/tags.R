@@ -13,7 +13,7 @@
 #'
 #' @examples
 #' \dontrun{my_tags <- bwr_tag_get(project_id = 12334534)}
-bwr_tag_get <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL) {
+bwr_tag_get <- function(project_id = NULL, token = Sys.getenv("BW_TOKEN")) {
 
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
@@ -49,7 +49,7 @@ bwr_tag_get <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL) {
 #'
 #' @examples
 #' \dontrun{bwr_tag_create(project_id = 12423432, name = 'Quick test tag')}
-bwr_tag_create <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL, name = NULL) {
+bwr_tag_create <- function(project_id = NULL, name = NULL, token = Sys.getenv("BW_TOKEN")) {
 
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
@@ -91,7 +91,7 @@ bwr_tag_create <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL, na
 #'
 #' @examples
 #' \dontrun{bwr_tag_delete(project_id = 122445, tag_id = 23432424)}
-bwr_tag_delete <- function(token = Sys.getenv("BW_TOKEN"), project_id, tag_id) {
+bwr_tag_delete <- function(project_id, tag_id, token = Sys.getenv("BW_TOKEN")) {
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
         stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")

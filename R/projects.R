@@ -19,7 +19,7 @@
 #' @examples
 #' \dontrun{my_projects <- bwr_get_projects(target = 'summary')}
 
-bwr_projects_get <- function(token = Sys.getenv("BW_TOKEN"), target = NULL) {
+bwr_projects_get <- function(target = NULL, token = Sys.getenv("BW_TOKEN")) {
     if (length(token) != 1 || class(token) != "character")
         stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
 

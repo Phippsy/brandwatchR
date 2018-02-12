@@ -12,7 +12,7 @@
 #'
 #' @examples
 #' \dontrun{my_rules <- bwr_rules_get(project_id = 12334534)}
-bwr_rule_get <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL) {
+bwr_rule_get <- function(project_id = NULL, token = Sys.getenv("BW_TOKEN")) {
 
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
@@ -47,7 +47,7 @@ bwr_rule_get <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL) {
 #'
 #' @examples
 #' \dontrun{bwr_rule_delete(project_id = 122445, rule_id = 23432424)}
-bwr_rule_delete <- function(token = Sys.getenv("BW_TOKEN"), project_id, rule_id) {
+bwr_rule_delete <- function(project_id, rule_id, token = Sys.getenv("BW_TOKEN")) {
 
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")

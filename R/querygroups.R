@@ -11,7 +11,7 @@
 #'
 #' @examples
 #' \dontrun{groups <- bwr_querygrp_get(project_id = 21343242)}
-bwr_querygrp_get <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL) {
+bwr_querygrp_get <- function(project_id = NULL, token = Sys.getenv("BW_TOKEN")) {
 
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
@@ -47,7 +47,7 @@ bwr_querygrp_get <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL) 
 #'
 #' @examples
 #' \dontrun{kill <- bwr_querygrp_delete(project_id = 234234234, group_id = 23423423)}
-bwr_querygrp_delete <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL, group_id = NULL) {
+bwr_querygrp_delete <- function(project_id = NULL, group_id = NULL, token = Sys.getenv("BW_TOKEN")) {
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
         stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
