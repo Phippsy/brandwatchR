@@ -7,19 +7,20 @@
 bwr_projects_get(token = Sys.getenv("BW_TOKEN"), target = NULL)
 }
 \arguments{
-\item{token}{The Brandwatch token, which will be automatically available via environment arguments provided you run bwr_auth() prior to any other functions.}
+\item{token}{The Brandwatch token, which will be automatically available via environment
+arguments provided you run bwr_auth() prior to any other functions.}
 
-\item{target}{(Optional) the target for your query. If not specified, results will include all available projects for the authenticated user and all available data for each project.
-If "summary", results will be a more simplified list of projects and excludes richer data such as query links.}
+\item{target}{(Optional) the target for your query. If not specified, results will include
+all available projects for the authenticated user and all available data for each project.
+If 'summary', results will be a more simplified list of projects and excludes richer data such as query links.}
 }
 \value{
 Returns a data frame of project data.
 }
 \description{
-Get Brandwatch project data
+#' Read the Brandwatch documentation for this API call
+at https://developers.brandwatch.com/docs/retrieving-projects
 }
 \examples{
-my_projects <- bwr_get_projects(target = "summary")
-
-Read the Brandwatch documentation for this API call at https://developers.brandwatch.com/docs/retrieving-projects
+\dontrun{my_projects <- bwr_get_projects(target = 'summary')}
 }

@@ -20,5 +20,5 @@ Returns a list of the JSON response.
 Delete a specified Brandwatch tag
 }
 \examples{
-bwr_tag_delete(project_id = 122445, tag_id = 23432424)
+\dontrun{bwr_tag_delete(project_id = 122445, tag_id = 23432424)}
 }

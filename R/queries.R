@@ -6,9 +6,11 @@
 #' @param token
 #' The auth token for this user, which should be generated into an environment variable using bwr_auth()
 #' @param project_id
-#' The project id you'd like to return all available queries for. Obtain a data frame of projects using bwr_get_projects()
+#' The project id you'd like to return all available queries for.
+#' Obtain a data frame of projects using bwr_get_projects()
 #' @param type
-#' (Optional) The type of query you'd like to return. If not specified, the API will return all available queries for the given project.
+#' (Optional) The type of query you'd like to return.
+#' If not specified, the API will return all available queries for the given project.
 #' Currently, results don't seem to be affected by the type parameter - the API appears to return full results in all cases.
 #'
 #' @return
@@ -16,23 +18,24 @@
 #' @export
 #'
 #' @examples
-#' my_queries <- bwr_query_get(project_id = 12334534)
-bwr_query_get <- function(token = Sys.getenv("BW_TOKEN"),
-                            project_id = NULL,
-                            type = NULL) {
-  url <- paste0("https://api.brandwatch.com/projects/",
-                project_id,
-                "/queries/summary")
-  r <- httr::GET(url,
-                 query = list(access_token = token,
-                              type = type))
-  httr::stop_for_status(r)
+#' \dontrun{my_queries <- bwr_query_get(project_id = 12334534)}
+bwr_query_get <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL, type = NULL) {
+    # Check for valid arguments -----------------------------------------------
+    if (length(token) != 1 || class(token) != "character")
+        stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
+    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric"))
+        stop("project_id must be a character or numeric vector of length one")
 
-  # Parse the results and return
-  con <- httr::content(r, "text")
-  json <- jsonlite::fromJSON(con)
-  results <- json$results
-  results
+
+    url <- paste0("https://api.brandwatch.com/projects/", project_id, "/queries/summary")
+    r <- httr::GET(url, query = list(access_token = token, type = type))
+    httr::stop_for_status(r)
+
+    # Parse the results and return
+    con <- httr::content(r, "text")
+    json <- jsonlite::fromJSON(con)
+    results <- json$results
+    results
 }
 
 #' Validate a Brandwatch query
@@ -47,24 +50,27 @@ bwr_query_get <- function(token = Sys.getenv("BW_TOKEN"),
 #' @export
 #'
 #' @examples
-#' any_issues <- bwr_query_check(query = list(query = "at_mentions:huey", language = "en"))
-bwr_query_check <- function(token = Sys.getenv("BW_TOKEN"),
-                            query = list() ) {
-  url <- paste0("https://api.brandwatch.com/query-validation/")
-  query$access_token <- token
-  r <- httr::GET(url,
-                 query = query)
-  httr::stop_for_status(r)
+#' \dontrun{any_issues <- bwr_query_check(query = list(query = 'at_mentions:huey', language = 'en'))}
+bwr_query_check <- function(token = Sys.getenv("BW_TOKEN"), query = list()) {
+    # Check for valid arguments -----------------------------------------------
+    if (length(token) != 1 || class(token) != "character")
+        stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
 
-  # Parse the results and return
-  con <- httr::content(r, "text")
-  json <- jsonlite::fromJSON(con)
-  json
+    url <- paste0("https://api.brandwatch.com/query-validation/")
+    query$access_token <- token
+    r <- httr::GET(url, query = query)
+    httr::stop_for_status(r)
+
+    # Parse the results and return
+    con <- httr::content(r, "text")
+    json <- jsonlite::fromJSON(con)
+    json
 }
 
 #' Upload a new query to Brandwatch
 #'
-#' Refer to https://developers.brandwatch.com/docs/creating-queries for more information. Unless otherwise specified, provide a single string argument.
+#' Refer to https://developers.brandwatch.com/docs/creating-queries for more information.
+#' Unless otherwise specified, provide a single string argument.
 #'
 #' @param token
 #' The authentication token, obtained using bwr_auth()
@@ -92,46 +98,42 @@ bwr_query_check <- function(token = Sys.getenv("BW_TOKEN"),
 #' @export
 #'
 #' @examples
-#' bwr_query_create(project_id = 12423432, samplePercent = 50, includedTerms = "at_mentions:mickeymouse", name = "Sample API query")
-bwr_query_create <- function(token = Sys.getenv("BW_TOKEN"),
-                             project_id = NULL,
-                             type = "search string",
-                             languageAgnostic = FALSE,
-                             samplePercent = 100,
-                             languages = "en",
-                             includedTerms = NULL,
-                             name = NULL,
-                             description = "My API query",
-                             industry = "general"
-) {
+#' \dontrun{bwr_query_create(project_id = 12423432,
+#'                  samplePercent = 50,
+#'                  includedTerms = 'at_mentions:mickeymouse',
+#'                  name = 'Sample API query')}
+bwr_query_create <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL, type = "search string", languageAgnostic = FALSE, samplePercent = 100,
+    languages = "en", includedTerms = NULL, name = NULL, description = "My API query", industry = "general") {
 
-  query <- list(
-    type = type, languageAgnostic = languageAgnostic, samplePercent = samplePercent, languages = languages, includedTerms = includedTerms,
-    name = name, description = description, industry = industry
-  )
-  # Prep the query parameters for conversion to JSON
-  for ( i in c("type", "languageAgnostic", "samplePercent", "name", "description", "industry")) {
-    query[[i]] <- jsonlite::unbox(query[[i]])
-  }
+    # Check for valid arguments -----------------------------------------------
+    if (length(token) != 1 || class(token) != "character")
+        stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
+    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric"))
+        stop("project_id must be a character or numeric vector of length one")
+    if (class(type) != "character" || length(type) != 1)
+        stop("type does not appear to be a character vector of length one")
+    if (is.null(name))
+        stop("Please supply a valid name for the query")
 
-  # Make the request
-  url <- paste0("https://api.brandwatch.com/projects/", project_id, "/queries/?access_token=", token)
-  query_json <- jsonlite::toJSON(query)
-  r <- httr::POST(url,
-                  accept_json(),
-                  add_headers("Content-Type" = "application/json"),
-                  body = query_json,
-                  encode = "json")
-  httr::stop_for_status(r)
+    query <- list(type = type, languageAgnostic = languageAgnostic, samplePercent = samplePercent, languages = languages, includedTerms = includedTerms,
+        name = name, description = description, industry = industry)
+    # Prep the query parameters for conversion to JSON
+    for (i in c("type", "languageAgnostic", "samplePercent", "name", "description", "industry")) {
+        query[[i]] <- jsonlite::unbox(query[[i]])
+    }
 
-  # Parse the results and return
-  con <- httr::content(r, "text")
-  json <- jsonlite::fromJSON(con)
+    # Make the request
+    url <- paste0("https://api.brandwatch.com/projects/", project_id, "/queries/?access_token=", token)
+    query_json <- jsonlite::toJSON(query)
+    r <- httr::POST(url, httr::accept_json(), httr::add_headers(`Content-Type` = "application/json"), body = query_json, encode = "json")
+    httr::stop_for_status(r)
 
-  base::message(paste0("Created new query.\n\tProject: ", project_id,
-                       "\n\tQuery name: ", json$name,
-                       "\n\tQuery ID: ", json$id))
-  json
+    # Parse the results and return
+    con <- httr::content(r, "text")
+    json <- jsonlite::fromJSON(con)
+
+    base::message(paste0("Created new query.\n\tProject: ", project_id, "\n\tQuery name: ", json$name, "\n\tQuery ID: ", json$id))
+    json
 
 
 }
@@ -141,30 +143,36 @@ bwr_query_create <- function(token = Sys.getenv("BW_TOKEN"),
 #' @param token
 #' The authentication token, obtained using bwr_auth()
 #' @param project_id
-#' The project ID in which the target query can be found. Obtain a data frame of project IDs using bwr_projects_get().
+#' The project ID in which the target query can be found.
+#' Obtain a data frame of project IDs using bwr_projects_get().
 #' @param query_id
-#' The ID of the query which you'd like to delete. Obtain a list of query IDs using bwr_query_get().
+#' The ID of the query which you'd like to delete.
+#' Obtain a list of query IDs using bwr_query_get().
 #'
 #' @return
 #' Returns a list of the JSON response.
 #' @export
 #'
 #' @examples
-#' bwr_query_delete(project_id = 122445, query_id = 23432424)
-bwr_query_delete <- function(token = Sys.getenv("BW_TOKEN"),
-                             project_id,
-                             query_id ) {
-  url <- paste0("https://api.brandwatch.com/projects/", project_id, "/queries/", query_id)
-  query$access_token <- token
-  r <- httr::DELETE(url,
-                 query = query)
-  httr::stop_for_status(r)
+#' \dontrun{bwr_query_delete(project_id = 122445, query_id = 23432424)}
+bwr_query_delete <- function(token = Sys.getenv("BW_TOKEN"), project_id, query_id) {
 
-  # Parse the results and return
-  con <- httr::content(r, "text")
-  json <- jsonlite::fromJSON(con)
-  base::message(paste0("Deleted query.\n\tProject: ", project_id,
-                       "\n\tQuery name: ", json$name,
-                       "\n\tQuery ID: ", json$id))
-  json
+    # Check for valid arguments -----------------------------------------------
+    if (length(token) != 1 || class(token) != "character")
+        stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
+    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric"))
+        stop("project_id must be a character or numeric vector of length one")
+    if (is.null(query_id) || length(query_id) != 1 || !class(query_id) %in% c("character", "numeric"))
+        stop("query_id must be a character or numeric vector of length one")
+
+    url <- paste0("https://api.brandwatch.com/projects/", project_id, "/queries/", query_id)
+    query$access_token <- token
+    r <- httr::DELETE(url, query = query)
+    httr::stop_for_status(r)
+
+    # Parse the results and return
+    con <- httr::content(r, "text")
+    json <- jsonlite::fromJSON(con)
+    base::message(paste0("Deleted query.\n\tProject: ", project_id, "\n\tQuery name: ", json$name, "\n\tQuery ID: ", json$id))
+    json
 }

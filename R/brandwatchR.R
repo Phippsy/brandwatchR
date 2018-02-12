@@ -30,7 +30,7 @@
 #'   \item{\code{\link{bwr_filters_get}}} - Get a data frame of all parameters which can be used to filter your query
 #'   \item{\code{\link{bwr_metrics_get}}} - Get a data frame of all metrics which have limited accepted values.
 #' }
-#;
+# ;
 #' @section Query Groups:
 #' \itemize{
 #'   \item{\code{\link{bwr_querygrp_get}}} - get the query groups for a specified project

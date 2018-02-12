@@ -10,22 +10,26 @@
 #' @export
 #'
 #' @examples
-#' my_queries <- bwr_query_get(project_id = 12334534)
+#' \dontrun{my_queries <- bwr_query_get(project_id = 12334534)}
 bwr_filters_get <- function(token = Sys.getenv("BW_TOKEN")) {
-  url <- "https://api.brandwatch.com/filters/"
-  r <- httr::GET(url,
-                 query = list(access_token = token))
-  httr::stop_for_status(r)
 
-  # Parse the results and return
-  con <- httr::content(r, "text")
-  json <- jsonlite::fromJSON(con)
-  results <- data.frame(metric = names(json))
+    # Check correct args ------------------------------------------------------
+    if (length(token) != 1 || class(token) != "character")
+        stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
 
-  metrics <- bwr_metrics_get()
+    url <- "https://api.brandwatch.com/filters/"
+    r <- httr::GET(url, query = list(access_token = token))
+    httr::stop_for_status(r)
 
-  results <- merge(results, metrics, by = "metric", all = TRUE)
-  results
+    # Parse the results and return
+    con <- httr::content(r, "text")
+    json <- jsonlite::fromJSON(con)
+    results <- data.frame(metric = names(json))
+
+    metrics <- bwr_metrics_get()
+
+    results <- merge(results, metrics, by = "metric", all = TRUE)
+    results
 }
 
 
@@ -43,25 +47,24 @@ bwr_filters_get <- function(token = Sys.getenv("BW_TOKEN")) {
 #' @export
 #'
 #' @examples
-#' my_queries <- bwr_metrics_get(project_id = 12334534)
+#' \dontrun{my_queries <- bwr_metrics_get(project_id = 12334534)}
 bwr_metrics_get <- function(token = Sys.getenv("BW_TOKEN")) {
-  url <- "https://api.brandwatch.com/metrics/"
-  r <- httr::GET(url,
-                 query = list(access_token = token))
-  httr::stop_for_status(r)
 
-  # Parse the results and return
-  con <- httr::content(r, "text")
-  json <- jsonlite::fromJSON(con)
-  json <- lapply(json, paste, collapse = ",")
-  results <- utils::stack(json)
-  results <- results[,c('ind', 'values')]
-  names(results) <- c("metric", "accepted values")
-  results$metric <- gsub("s$", "", results$metric)
-  results
-}
+    # Check correct args ------------------------------------------------------
+    if (length(token) != 1 || class(token) != "character")
+        stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
 
+    url <- "https://api.brandwatch.com/metrics/"
+    r <- httr::GET(url, query = list(access_token = token))
+    httr::stop_for_status(r)
 
-add_filters <- function(x) {
-  query[[x]] <- filter[[x]]
+    # Parse the results and return
+    con <- httr::content(r, "text")
+    json <- jsonlite::fromJSON(con)
+    json <- lapply(json, paste, collapse = ",")
+    results <- utils::stack(json)
+    results <- results[, c("ind", "values")]
+    names(results) <- c("metric", "accepted values")
+    results$metric <- gsub("s$", "", results$metric)
+    results
 }

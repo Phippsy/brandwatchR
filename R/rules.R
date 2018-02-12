@@ -11,21 +11,24 @@
 #' @export
 #'
 #' @examples
-#' my_rules <- bwr_rules_get(project_id = 12334534)
-bwr_rule_get <- function(token = Sys.getenv("BW_TOKEN"),
-                          project_id = NULL) {
-  url <- paste0("https://api.brandwatch.com/projects/",
-                project_id,
-                "/rules")
-  r <- httr::GET(url,
-                 query = list(access_token = token))
-  httr::stop_for_status(r)
+#' \dontrun{my_rules <- bwr_rules_get(project_id = 12334534)}
+bwr_rule_get <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL) {
 
-  # Parse the results and return
-  con <- httr::content(r, "text")
-  json <- jsonlite::fromJSON(con)
-  results <- json$results
-  results
+    # Check for valid arguments -----------------------------------------------
+    if (length(token) != 1 || class(token) != "character")
+        stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
+    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric"))
+        stop("project_id must be a character or numeric vector of length one")
+
+    url <- paste0("https://api.brandwatch.com/projects/", project_id, "/rules")
+    r <- httr::GET(url, query = list(access_token = token))
+    httr::stop_for_status(r)
+
+    # Parse the results and return
+    con <- httr::content(r, "text")
+    json <- jsonlite::fromJSON(con)
+    results <- json$results
+    results
 }
 
 
@@ -43,19 +46,24 @@ bwr_rule_get <- function(token = Sys.getenv("BW_TOKEN"),
 #' @export
 #'
 #' @examples
-#' bwr_rule_delete(project_id = 122445, rule_id = 23432424)
-bwr_rule_delete <- function(token = Sys.getenv("BW_TOKEN"),
-                             project_id,
-                             rule_id ) {
-  url <- paste0("https://api.brandwatch.com/projects/", project_id, "/rules/", rule_id, "?access_token=", token)
-  r <- httr::DELETE(url)
-  httr::stop_for_status(r)
+#' \dontrun{bwr_rule_delete(project_id = 122445, rule_id = 23432424)}
+bwr_rule_delete <- function(token = Sys.getenv("BW_TOKEN"), project_id, rule_id) {
 
-  # Parse the results and return
-  con <- httr::content(r, "text")
-  json <- jsonlite::fromJSON(con)
-  base::message(paste0("Deleted rule.\n\tProject: ", project_id,
-                       "\n\trule name: ", json$name,
-                       "\n\trule ID: ", json$id))
-  json
+    # Check for valid arguments -----------------------------------------------
+    if (length(token) != 1 || class(token) != "character")
+        stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
+    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric"))
+        stop("project_id must be a character or numeric vector of length one")
+    if (is.null(rule_id) || length(rule_id) != 1 || !class(rule_id) %in% c("character", "numeric"))
+        stop("rule_id must be a character or numeric vector of length one")
+
+    url <- paste0("https://api.brandwatch.com/projects/", project_id, "/rules/", rule_id, "?access_token=", token)
+    r <- httr::DELETE(url)
+    httr::stop_for_status(r)
+
+    # Parse the results and return
+    con <- httr::content(r, "text")
+    json <- jsonlite::fromJSON(con)
+    base::message(paste0("Deleted rule.\n\tProject: ", project_id, "\n\trule name: ", json$name, "\n\trule ID: ", json$id))
+    json
 }

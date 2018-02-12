@@ -16,5 +16,5 @@ Returns a dataframe of available filters
 See the Brandwatch documentation for more information at https://developers.brandwatch.com/docs/available-filters
 }
 \examples{
-my_queries <- bwr_query_get(project_id = 12334534)
+\dontrun{my_queries <- bwr_query_get(project_id = 12334534)}
 }

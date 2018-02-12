@@ -12,22 +12,25 @@
 #' @export
 #'
 #' @examples
-#' my_project <- bwr_get_projects()$id[1]
-#' my_workflow <- bwr_wf_get(project_id = my_project)
+#' \dontrun{my_project <- bwr_get_projects()$id[1]
+#' my_workflow <- bwr_wf_get(project_id = my_project)}
 #'
-bwr_wf_get <- function(token = Sys.getenv("BW_TOKEN"),
-                             project_id = NULL) {
-  url <- paste0("https://api.brandwatch.com/projects/",
-                project_id,
-                "/workflow")
-  r <- httr::GET(url,
-                 query = list(access_token = token))
-  httr::stop_for_status(r)
+bwr_wf_get <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL) {
 
-  # Parse the results and return
-  con <- httr::content(r, "text")
-  json <- jsonlite::fromJSON(con)
-  json
+    # Check for valid arguments -----------------------------------------------
+    if (length(token) != 1 || class(token) != "character")
+        stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
+    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric"))
+        stop("project_id must be a character or numeric vector of length one")
+
+    url <- paste0("https://api.brandwatch.com/projects/", project_id, "/workflow")
+    r <- httr::GET(url, query = list(access_token = token))
+    httr::stop_for_status(r)
+
+    # Parse the results and return
+    con <- httr::content(r, "text")
+    json <- jsonlite::fromJSON(con)
+    json
 }
 
 

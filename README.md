@@ -13,7 +13,7 @@ From here, you can retrieve mentions data using `bwr_get_mentions()`, which take
 
 ## Install
 
-```{r}
+```r
 devtools::install_github("Phippsy/brandwatchR")
 ```
 
@@ -23,7 +23,7 @@ Only username and password are mandatory.
 You can optionally specify `refresh = TRUE` to force the function to obtain a new token from the API. Otherwise it will read a cached local file if available. 
 You can also optionally specify `cache = FALSE` if you prefer not to have your token cached locally. In this case, your token will be stored in a local environment variable and available for the current R session only.
 
-```{r}
+```r
 bwr_auth(username = "your@username.com",
          password = "your_password",
          refresh = TRUE,
@@ -32,7 +32,7 @@ bwr_auth(username = "your@username.com",
 
 ## Get project info
 
-```{r}
+```r
 my_projects <- bwr_projects_get()
 head(my_projects)
 ```
@@ -41,12 +41,11 @@ This will display a data frame of project information including project ID, desc
 
 Read the [Brandwatch documentation for more info](https://developers.brandwatch.com/docs/retrieving-projects)
 
-
 ## Get queries for a project
 
 Once you have a project ID, you can find out all the available queries in your environment. Do this using the `bwr_query_get()` function:
 
-```{r}
+```r
 # We arbitrarily pull the first available project ID
 my_project <- bwr_projects_get()$id[1]
 
@@ -60,7 +59,7 @@ This will return a data frame showing you the ID, name, created date and similar
 
 Finally, the fun stuff - we can now request all mentions for a given query, using a specified date range. We achieve that using the `bwr_mentions_get()` function.
 
-```{r}
+```r
 my_mentions <- bwr_mentions_get(
   project_id = my_project,
   query_id = my_query,

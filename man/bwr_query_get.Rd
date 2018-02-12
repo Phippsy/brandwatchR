@@ -10,9 +10,11 @@ bwr_query_get(token = Sys.getenv("BW_TOKEN"), project_id = NULL,
 \arguments{
 \item{token}{The auth token for this user, which should be generated into an environment variable using bwr_auth()}
 
-\item{project_id}{The project id you'd like to return all available queries for. Obtain a data frame of projects using bwr_get_projects()}
+\item{project_id}{The project id you'd like to return all available queries for.
+Obtain a data frame of projects using bwr_get_projects()}
 
-\item{type}{(Optional) The type of query you'd like to return. If not specified, the API will return all available queries for the given project.
+\item{type}{(Optional) The type of query you'd like to return.
+If not specified, the API will return all available queries for the given project.
 Currently, results don't seem to be affected by the type parameter - the API appears to return full results in all cases.}
 }
 \value{
@@ -22,5 +24,5 @@ Returns a dataframe of queries matching the project.
 See the Brandwatch documentation for more information at https://developers.brandwatch.com/docs/retrieving-queries.
 }
 \examples{
-my_queries <- bwr_query_get(project_id = 12334534)
+\dontrun{my_queries <- bwr_query_get(project_id = 12334534)}
 }

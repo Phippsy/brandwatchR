@@ -9,15 +9,20 @@ bwr_mentions_total(project_id = NULL, query_id = NULL, querygrp_id = NULL,
   token = Sys.getenv("BW_TOKEN"))
 }
 \arguments{
-\item{project_id}{The project id in which the specified query is contained. Obtain a list of project IDs using bwr_get_projects().}
+\item{project_id}{The project id in which the specified query is contained.
+Obtain a list of project IDs using bwr_get_projects().}
 
-\item{query_id}{The query ID you'd like to see total mentions for. Note that you can only specify a query or a query group, not both.}
+\item{query_id}{The query ID you'd like to see total mentions for.
+Note that you can only specify a query or a query group, not both.}
 
-\item{querygrp_id}{The query group ID you'd like to see total mentions for. Note that you can only specify a query or a query group, not both.}
+\item{querygrp_id}{The query group ID you'd like to see total mentions for.
+Note that you can only specify a query or a query group, not both.}
 
-\item{filters}{(Optional) A list of key-value pairs to filter the mentions query by. Use the bwr_filters_get() function to find out all available filters.}
+\item{filters}{(Optional) A list of key-value pairs to filter the mentions query by.
+Use the bwr_filters_get() function to find out all available filters.}
 
-\item{date_range}{A character vector containing 2 date values in YYYY-mm-dd format. The first value is the beginning of your desired date range and the second value is the end of the date range.}
+\item{date_range}{A character vector containing 2 date values in YYYY-mm-dd format.
+The first value is the beginning of your desired date range and the second value is the end of the date range.}
 
 \item{token}{The authentication token, acquired using bwr_auth()}
 }
@@ -28,11 +33,11 @@ Returns a numeric vector of length 1 with the results.
 Get the total mentions for a specified Brandwatch query or query group
 }
 \examples{
-my_project <- bwr_projects_get()$id[1]
+\dontrun{my_project <- bwr_projects_get()$id[1]
 my_query <- bwr_queries_get(project_id = my_project)$id[1]
 my_mentions <- bwr_mentions_total(
 project_id = my_project,
 query_id = my_query,
-date_range = c("2018-01-01", "2018-02-01"))
+date_range = c('2018-01-01', '2018-02-01'))}
 
 }

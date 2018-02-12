@@ -18,7 +18,8 @@ The project id in which the specified query is contained.
 The id of the query you'd like to run.
   Obtain a list of queries for any specified project using bwr_get_queries().}
 
-\item{date_range}{A character vector containing 2 date values in YYYY-mm-dd format. The first value is the beginning of your desired date range and the second value is the end of the date range.}
+\item{date_range}{A character vector containing 2 date values in YYYY-mm-dd format.
+The first value is the beginning of your desired date range and the second value is the end of the date range.}
 
 \item{order_by}{String.
 (Optional) The name of the metric you'd like to order your results by.}
@@ -26,13 +27,17 @@ The id of the query you'd like to run.
 \item{order_direction}{String.
 Either 'asc' or 'desc', to specify ascending or descending order.}
 
-\item{filters}{(Optional) A list of key-value pairs to filter the mentions query by. Use the bwr_filters_get() function to find out all available filters.}
+\item{filters}{(Optional) A list of key-value pairs to filter the mentions query by.
+Use the bwr_filters_get() function to find out all available filters.}
 
 \item{page}{Numeric, optional.
-The page number for which to return results. This is needed only when R needs to iterate through multiple pages of results from the Brandwatch API. It is recommended that you keep this value set as zero.}
+The page number for which to return results.
+This is needed only when R needs to iterate through multiple pages of results from the Brandwatch API.
+It is recommended that you keep this value set as zero.}
 
 \item{token}{The authentication token, acquired using bwr_auth().
-This token will be automatically obtained from the user's environment variable 'BW_TOKEN' and does not need to be provided.}
+This token will be automatically obtained from the user's
+environment variable 'BW_TOKEN' and does not need to be provided.}
 }
 \value{
 Returns a data frame containing all results
@@ -41,9 +46,13 @@ Returns a data frame containing all results
 Returns a data frame containing any results found for the specified query ID.
 }
 \examples{
-my_project <- bwr_projects_get()$id[1]
+\dontrun{my_project <- bwr_projects_get()$id[1]
 my_query <- bwr_query_get(project_id = my_project)$id[1]
-my_mentions <- bwr_mentions_get(project_id = my_project, query_id = my_query, filters = list(gender = "female", sentiment = "neutral"), order_by = "sentiment", order_direction = "asc", date_range = c("2018-01-01", "2018-02-01"))
+my_mentions <- bwr_mentions_get(project_id = my_project,
+                                query_id = my_query,
+                                filters = list(gender = 'female', sentiment = 'neutral'),
+                                order_by = 'sentiment', order_direction = 'asc',
+                                date_range = c('2018-01-01', '2018-02-01'))}
 
 }
 \seealso{

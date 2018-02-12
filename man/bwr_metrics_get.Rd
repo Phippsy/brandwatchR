@@ -19,5 +19,5 @@ When examining parameters which can be used to filter a metric call, some parame
 See the Brandwatch documentation for more information at https://developers.brandwatch.com/docs/available-filters
 }
 \examples{
-my_queries <- bwr_metrics_get(project_id = 12334534)
+\dontrun{my_queries <- bwr_metrics_get(project_id = 12334534)}
 }

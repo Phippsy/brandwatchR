@@ -18,5 +18,5 @@ Returns a dataframe of tags matching the project.
 See the Brandwatch documentation for more information at https://developers.brandwatch.com/docs/retrieving-tags.
 }
 \examples{
-my_tags <- bwr_tag_get(project_id = 12334534)
+\dontrun{my_tags <- bwr_tag_get(project_id = 12334534)}
 }

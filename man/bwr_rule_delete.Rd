@@ -20,5 +20,5 @@ Returns a list of the JSON response.
 Delete a specified Brandwatch rule
 }
 \examples{
-bwr_rule_delete(project_id = 122445, rule_id = 23432424)
+\dontrun{bwr_rule_delete(project_id = 122445, rule_id = 23432424)}
 }

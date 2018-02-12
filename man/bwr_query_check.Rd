@@ -18,5 +18,5 @@ Returns a list containing any errors or issues, if found
 Validate a Brandwatch query
 }
 \examples{
-any_issues <- bwr_query_check(query = list(query = "at_mentions:huey", language = "en"))
+\dontrun{any_issues <- bwr_query_check(query = list(query = 'at_mentions:huey', language = 'en'))}
 }

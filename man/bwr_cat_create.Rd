@@ -14,14 +14,19 @@ bwr_cat_create(token = Sys.getenv("BW_TOKEN"), project_id = NULL,
 
 \item{name}{The name of the category}
 
-\item{children}{A list of lists (sorry!), each list defining the key-value pairs for name (mandatory) and id (optional) of each child subcategory.}
+\item{children}{A list of lists (sorry!), each list defining the key-value pairs for name (mandatory) and
+id (optional) of each child subcategory.}
 }
 \value{
 Returns a list containing the JSON response from the server.
 }
 \description{
-Refer to https://developers.brandwatch.com/docs/creating-categories for more information. Unless otherwise specified, provide a single string argument.
+Refer to https://developers.brandwatch.com/docs/creating-categories for
+more information. Unless otherwise specified, provide a single string argument.
 }
 \examples{
-bwr_cat_create(project_id = 12423432, name = "Quick test cat", children = list(list(name = "category one", id = 234234), list(name = "category 2")))
+\dontrun{bwr_cat_create(project_id = 12423432,
+               name = 'Quick test cat',
+               children = list(list(name = 'category one', id = 234234),
+                 list(name = 'category 2')))}
 }

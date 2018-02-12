@@ -10,21 +10,25 @@
 #' @export
 #'
 #' @examples
-#' groups <- bwr_querygrp_get(project_id = 21343242)
-bwr_querygrp_get <- function(token = Sys.getenv("BW_TOKEN"),
-                          project_id = NULL) {
-  url <- paste0("https://api.brandwatch.com/projects/",
-                project_id,
-                "/querygroups")
-  r <- httr::GET(url,
-                 query = list(access_token = token))
-  httr::stop_for_status(r)
+#' \dontrun{groups <- bwr_querygrp_get(project_id = 21343242)}
+bwr_querygrp_get <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL) {
 
-  # Parse the results and return
-  con <- httr::content(r, "text")
-  json <- jsonlite::fromJSON(con)
-  results <- json$results
-  results
+    # Check for valid arguments -----------------------------------------------
+    if (length(token) != 1 || class(token) != "character")
+        stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
+    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric"))
+        stop("project_id must be a character or numeric vector of length one")
+
+
+    url <- paste0("https://api.brandwatch.com/projects/", project_id, "/querygroups")
+    r <- httr::GET(url, query = list(access_token = token))
+    httr::stop_for_status(r)
+
+    # Parse the results and return
+    con <- httr::content(r, "text")
+    json <- jsonlite::fromJSON(con)
+    results <- json$results
+    results
 }
 
 
@@ -42,27 +46,26 @@ bwr_querygrp_get <- function(token = Sys.getenv("BW_TOKEN"),
 #' @export
 #'
 #' @examples
-#' kill <- bwr_querygrp_delete(project_id = 234234234, group_id = 23423423)
-bwr_querygrp_delete <- function(token = Sys.getenv("BW_TOKEN"),
-                             project_id = NULL,
-                             group_id = NULL) {
-  url <- paste0("https://api.brandwatch.com/projects/",
-                project_id,
-                "/querygroups/",
-                group_id)
-  r <- httr::DELETE(url,
-                 query = list(access_token = token,
-                              type = type))
-  httr::stop_for_status(r)
+#' \dontrun{kill <- bwr_querygrp_delete(project_id = 234234234, group_id = 23423423)}
+bwr_querygrp_delete <- function(token = Sys.getenv("BW_TOKEN"), project_id = NULL, group_id = NULL) {
+    # Check for valid arguments -----------------------------------------------
+    if (length(token) != 1 || class(token) != "character")
+        stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
+    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric"))
+        stop("project_id must be a character or numeric vector of length one")
+    if (is.null(group_id) || length(group_id) != 1 || !class(group_id) %in% c("character", "numeric"))
+        stop("group_id must be a character or numeric vector of length one")
 
-  # Parse the results and return
-  con <- httr::content(r, "text")
-  json <- jsonlite::fromJSON(con)
+    url <- paste0("https://api.brandwatch.com/projects/", project_id, "/querygroups/", group_id)
+    r <- httr::DELETE(url, query = list(access_token = token))
+    httr::stop_for_status(r)
 
-  # Confirm deletion
-  base::message(paste0("Deleted query group.\n\tProject: ", project_id,
-                       "\n\tQuery Group name: ", json$name,
-                       "\n\tQuery Group ID: ", json$id))
+    # Parse the results and return
+    con <- httr::content(r, "text")
+    json <- jsonlite::fromJSON(con)
 
-  json
+    # Confirm deletion
+    base::message(paste0("Deleted query group.\n\tProject: ", project_id, "\n\tQuery Group name: ", json$name, "\n\tQuery Group ID: ", json$id))
+
+    json
 }

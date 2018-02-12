@@ -18,5 +18,5 @@ Returns a data frame of the query groups for the given project, if any exist.
 Get a data frame of Brandwatch query groups in the specified project
 }
 \examples{
-groups <- bwr_querygrp_get(project_id = 21343242)
+\dontrun{groups <- bwr_querygrp_get(project_id = 21343242)}
 }

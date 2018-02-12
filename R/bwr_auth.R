@@ -18,24 +18,31 @@
 #' If FALSE, the token will be not be cached locally.
 #'
 #' @return
-#' Your environment variable "BW_TOKEN" will be set to the value of your authentication token.
+#' Invisibly returns the string containing the token returned by Brandwatch.
+#' Your environment variable 'BW_TOKEN' will be set to the value of your authentication token.
 #' @export
 #'
 #' @examples
-#' bwr_auth(un = "mickey@mouse.com", pw = "itsasmallworld")
+#' \dontrun{bwr_auth(un = 'mickey@@mouse.com', pw = 'itsasmallworld')}
 bwr_auth <- function(un = NULL, pw = NULL, refresh = FALSE, cache = TRUE) {
-  if ( refresh | !file.exists(".bw_token") ) {
-    token_url <- paste0("https://api.brandwatch.com/oauth/token?",
-                          "username=", un,
-                          "&grant_type=api-password&client_id=brandwatch-api-client",
-                          "&password=", URLencode(pw))
-    r <- httr::POST(token_url)
-    httr::stop_for_status(r)
-    token <- httr::content(r)$access_token
-    if (cache) saveRDS(token, ".bw_token")
+
+    if (refresh | !file.exists(".bw_token")) {
+        if (is.null(un) | class(un) != "character" | length(un) != 1)
+            stop("You must provide a username as a string of length one")
+        if (is.null(pw) | class(pw) != "character" | length(pw) != 1)
+            stop("You must provide a password as a string of length one")
+
+        token_url <- paste0("https://api.brandwatch.com/oauth/token?", "username=", un, "&grant_type=api-password&client_id=brandwatch-api-client",
+            "&password=", utils::URLencode(pw))
+        r <- httr::POST(token_url)
+        httr::stop_for_status(r)
+        token <- httr::content(r)$access_token
+        if (cache)
+            saveRDS(token, ".bw_token")
     } else {
-      token <- readRDS(".bw_token")
-      message("Token read from cached file '.bw_token'")
-  }
-  Sys.setenv("BW_TOKEN" = token)
+        token <- readRDS(".bw_token")
+        message("Token read from cached file '.bw_token'")
+    }
+    Sys.setenv(BW_TOKEN = token)
+    invisible(token)
 }

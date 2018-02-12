@@ -21,5 +21,5 @@ Returns a list containing the JSON response from the server.
 Refer to https://developers.brandwatch.com/docs/creating-tags for more information. Unless otherwise specified, provide a single string argument.
 }
 \examples{
-bwr_tag_create(project_id = 12423432, name = "Quick test tag")
+\dontrun{bwr_tag_create(project_id = 12423432, name = 'Quick test tag')}
 }

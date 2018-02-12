@@ -34,8 +34,12 @@ bwr_query_create(token = Sys.getenv("BW_TOKEN"), project_id = NULL,
 Returns a list containing the JSON response from the server.
 }
 \description{
-Refer to https://developers.brandwatch.com/docs/creating-queries for more information. Unless otherwise specified, provide a single string argument.
+Refer to https://developers.brandwatch.com/docs/creating-queries for more information.
+Unless otherwise specified, provide a single string argument.
 }
 \examples{
-bwr_query_create(project_id = 12423432, samplePercent = 50, includedTerms = "at_mentions:mickeymouse", name = "Sample API query")
+\dontrun{bwr_query_create(project_id = 12423432,
+                 samplePercent = 50,
+                 includedTerms = 'at_mentions:mickeymouse',
+                 name = 'Sample API query')}
 }

@@ -18,7 +18,7 @@ Returns a list containing all results
 Refer to https://developers.brandwatch.com/docs/retrieving-workflow for more information.
 }
 \examples{
-my_project <- bwr_get_projects()$id[1]
-my_workflow <- bwr_wf_get(project_id = my_project)
+\dontrun{my_project <- bwr_get_projects()$id[1]
+my_workflow <- bwr_wf_get(project_id = my_project)}
 
 }

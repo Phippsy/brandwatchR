@@ -21,5 +21,5 @@ Returns a list of the JSON response from the server.
 Delete a specified Brandwatch query group
 }
 \examples{
-kill <- bwr_querygrp_delete(project_id = 234234234, group_id = 23423423)
+\dontrun{kill <- bwr_querygrp_delete(project_id = 234234234, group_id = 23423423)}
 }

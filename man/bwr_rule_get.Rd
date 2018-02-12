@@ -18,5 +18,5 @@ Returns a dataframe of rules matching the project. Due to the structure of the A
 See the Brandwatch documentation for more information at https://developers.brandwatch.com/docs/retrieving-rules.
 }
 \examples{
-my_rules <- bwr_rules_get(project_id = 12334534)
+\dontrun{my_rules <- bwr_rules_get(project_id = 12334534)}
 }

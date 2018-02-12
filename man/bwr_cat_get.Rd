@@ -7,16 +7,19 @@
 bwr_cat_get(token = Sys.getenv("BW_TOKEN"), project_id = NULL)
 }
 \arguments{
-\item{token}{The auth token for this user, which should be generated into an environment variable using bwr_auth()}
+\item{token}{The auth token for this user, which should be generated
+into an environment variable using bwr_auth()}
 
-\item{project_id}{The project id you'd like to return all available categories for. Obtain a data frame of projects using bwr_get_projects()}
+\item{project_id}{The project id you'd like to return all available categories for.
+Obtain a data frame of projects using bwr_get_projects()}
 }
 \value{
 Returns a dataframe of categories matching the project.
 }
 \description{
-See the Brandwatch documentation for more information at https://developers.brandwatch.com/docs/retrieving-categories.
+See the Brandwatch documentation for more information
+at https://developers.brandwatch.com/docs/retrieving-categories.
 }
 \examples{
-my_categories <- bwr_cat_get(project_id = 12334534)
+\dontrun{my_categories <- bwr_cat_get(project_id = 12334534))}
 }

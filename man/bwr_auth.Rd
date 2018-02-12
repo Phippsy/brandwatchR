@@ -20,12 +20,13 @@ If TRUE, the token will be cached in the current working directory in '.bw_token
 If FALSE, the token will be not be cached locally.}
 }
 \value{
-Your environment variable "BW_TOKEN" will be set to the value of your authentication token.
+Invisibly returns the string containing the token returned by Brandwatch.
+Your environment variable 'BW_TOKEN' will be set to the value of your authentication token.
 }
 \description{
 Authenticates using specified username and password.
 Also caches a local version of the authentication token unless otherwise specified.
 }
 \examples{
-bwr_auth(un = "mickey@mouse.com", pw = "itsasmallworld")
+\dontrun{bwr_auth(un = 'mickey@mouse.com', pw = 'itsasmallworld')}
 }
