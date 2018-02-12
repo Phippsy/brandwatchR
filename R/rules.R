@@ -17,7 +17,7 @@ bwr_rule_get <- function(project_id = NULL, token = Sys.getenv("BW_TOKEN")) {
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
         stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
-    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric"))
+    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric", "integer"))
         stop("project_id must be a character or numeric vector of length one")
 
     url <- paste0("https://api.brandwatch.com/projects/", project_id, "/rules")
@@ -52,9 +52,9 @@ bwr_rule_delete <- function(project_id, rule_id, token = Sys.getenv("BW_TOKEN"))
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
         stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
-    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric"))
+    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric", "integer"))
         stop("project_id must be a character or numeric vector of length one")
-    if (is.null(rule_id) || length(rule_id) != 1 || !class(rule_id) %in% c("character", "numeric"))
+    if (is.null(rule_id) || length(rule_id) != 1 || !class(rule_id) %in% c("character", "numeric", "integer"))
         stop("rule_id must be a character or numeric vector of length one")
 
     url <- paste0("https://api.brandwatch.com/projects/", project_id, "/rules/", rule_id, "?access_token=", token)

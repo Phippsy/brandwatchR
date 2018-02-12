@@ -4,18 +4,18 @@
 \alias{bwr_query_get}
 \title{Get a data frame of available queries for a given project}
 \usage{
-bwr_query_get(token = Sys.getenv("BW_TOKEN"), project_id = NULL,
-  type = NULL)
+bwr_query_get(project_id = NULL, type = NULL,
+  token = Sys.getenv("BW_TOKEN"))
 }
 \arguments{
-\item{token}{The auth token for this user, which should be generated into an environment variable using bwr_auth()}
-
 \item{project_id}{The project id you'd like to return all available queries for.
 Obtain a data frame of projects using bwr_get_projects()}
 
 \item{type}{(Optional) The type of query you'd like to return.
 If not specified, the API will return all available queries for the given project.
 Currently, results don't seem to be affected by the type parameter - the API appears to return full results in all cases.}
+
+\item{token}{The auth token for this user, which should be generated into an environment variable using bwr_auth()}
 }
 \value{
 Returns a dataframe of queries matching the project.

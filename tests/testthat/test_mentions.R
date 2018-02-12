@@ -9,7 +9,7 @@ test_that("mentions_get handles missing token values", {
 })
 
 test_that("mentions_get handles missing / invalid project values", {
-  expect_error(bwr_mentions_get(token = "test_token", query_id = 23423, project_id = 1:1), "project.*must")
+  expect_error(bwr_mentions_get(token = "test_token", query_id = 23423, project_id = 1:10), "project.*must")
   expect_error(bwr_mentions_get(token = "test_token", query_id = 23423, project_id = Sys.Date()), "project.*must")
   expect_error(bwr_mentions_get(token = "test_token", query_id = 23423, project_id = NULL), "project.*must")
 })
@@ -46,7 +46,7 @@ test_that("mentions_total handles missing token values", {
 })
 
 test_that("mentions_total handles missing / invalid project values", {
-  expect_error(bwr_mentions_total(token = "test_token", query_id = 23423, project_id = 1:1), "project.*must")
+  expect_error(bwr_mentions_total(token = "test_token", query_id = 23423, project_id = 1:10), "project.*must")
   expect_error(bwr_mentions_total(token = "test_token", query_id = 23423, project_id = Sys.Date()), "project.*must")
   expect_error(bwr_mentions_total(token = "test_token", query_id = 23423, project_id = NULL), "project.*must")
 })
@@ -89,7 +89,7 @@ test_that("mentions_topics handles missing token values", {
 })
 
 test_that("mentions_topics handles missing / invalid project values", {
-  expect_error(bwr_mentions_topics(token = "test_token", query_id = 23423, project_id = 1:1), "project.*must")
+  expect_error(bwr_mentions_topics(token = "test_token", query_id = 23423, project_id = 1:2), "project.*must")
   expect_error(bwr_mentions_topics(token = "test_token", query_id = 23423, project_id = Sys.Date()), "project.*must")
   expect_error(bwr_mentions_topics(token = "test_token", query_id = 23423, project_id = NULL), "project.*must")
 })

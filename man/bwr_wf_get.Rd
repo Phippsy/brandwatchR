@@ -4,12 +4,12 @@
 \alias{bwr_wf_get}
 \title{Get a list of workflows for the specified query and project}
 \usage{
-bwr_wf_get(token = Sys.getenv("BW_TOKEN"), project_id = NULL)
+bwr_wf_get(project_id = NULL, token = Sys.getenv("BW_TOKEN"))
 }
 \arguments{
-\item{token}{The authentication token, acquired using bwr_auth()}
-
 \item{project_id}{The project id in which the specified workflow is contained. Obtain a list of project IDs using bwr_get_projects().}
+
+\item{token}{The authentication token, acquired using bwr_auth()}
 }
 \value{
 Returns a list containing all results

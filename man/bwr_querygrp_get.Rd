@@ -4,12 +4,12 @@
 \alias{bwr_querygrp_get}
 \title{Get a data frame of Brandwatch query groups in the specified project}
 \usage{
-bwr_querygrp_get(token = Sys.getenv("BW_TOKEN"), project_id = NULL)
+bwr_querygrp_get(project_id = NULL, token = Sys.getenv("BW_TOKEN"))
 }
 \arguments{
-\item{token}{The authentication token, obtained using bwr_auth()}
-
 \item{project_id}{The project ID whose query groups you'd like to return}
+
+\item{token}{The authentication token, obtained using bwr_auth()}
 }
 \value{
 Returns a data frame of the query groups for the given project, if any exist.

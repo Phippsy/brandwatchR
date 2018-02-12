@@ -4,12 +4,12 @@
 \alias{bwr_tag_get}
 \title{Get a data frame of available tags for a given project}
 \usage{
-bwr_tag_get(token = Sys.getenv("BW_TOKEN"), project_id = NULL)
+bwr_tag_get(project_id = NULL, token = Sys.getenv("BW_TOKEN"))
 }
 \arguments{
-\item{token}{The auth token for this user, which should be generated into an environment variable using bwr_auth()}
-
 \item{project_id}{The project id you'd like to return all available tags for. Obtain a data frame of projects using bwr_get_projects()}
+
+\item{token}{The auth token for this user, which should be generated into an environment variable using bwr_auth()}
 }
 \value{
 Returns a dataframe of tags matching the project.

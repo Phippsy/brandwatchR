@@ -4,14 +4,14 @@
 \alias{bwr_rule_delete}
 \title{Delete a specified Brandwatch rule}
 \usage{
-bwr_rule_delete(token = Sys.getenv("BW_TOKEN"), project_id, rule_id)
+bwr_rule_delete(project_id, rule_id, token = Sys.getenv("BW_TOKEN"))
 }
 \arguments{
-\item{token}{The authentication token, obtained using bwr_auth()}
-
 \item{project_id}{The project ID in which the target rule can be found. Obtain a data frame of project IDs using bwr_projects_get().}
 
 \item{rule_id}{The ID of the rule which you'd like to delete. Obtain a list of rule IDs using bwr_rule_get().}
+
+\item{token}{The authentication token, obtained using bwr_auth()}
 }
 \value{
 Returns a list of the JSON response.

@@ -4,16 +4,16 @@
 \alias{bwr_query_delete}
 \title{Delete a specified Brandwatch query}
 \usage{
-bwr_query_delete(token = Sys.getenv("BW_TOKEN"), project_id, query_id)
+bwr_query_delete(project_id, query_id, token = Sys.getenv("BW_TOKEN"))
 }
 \arguments{
-\item{token}{The authentication token, obtained using bwr_auth()}
-
 \item{project_id}{The project ID in which the target query can be found.
 Obtain a data frame of project IDs using bwr_projects_get().}
 
 \item{query_id}{The ID of the query which you'd like to delete.
 Obtain a list of query IDs using bwr_query_get().}
+
+\item{token}{The authentication token, obtained using bwr_auth()}
 }
 \value{
 Returns a list of the JSON response.

@@ -4,5 +4,11 @@
         "splitterpos" : 616,
         "topwindowstate" : "NORMAL",
         "windowheight" : 1108
+    },
+    "right" : {
+        "panelheight" : 1069,
+        "splitterpos" : 664,
+        "topwindowstate" : "NORMAL",
+        "windowheight" : 1108
     }
 }

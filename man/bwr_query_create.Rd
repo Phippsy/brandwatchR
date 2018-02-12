@@ -4,14 +4,12 @@
 \alias{bwr_query_create}
 \title{Upload a new query to Brandwatch}
 \usage{
-bwr_query_create(token = Sys.getenv("BW_TOKEN"), project_id = NULL,
-  type = "search string", languageAgnostic = FALSE, samplePercent = 100,
-  languages = "en", includedTerms = NULL, name = NULL,
-  description = "My API query", industry = "general")
+bwr_query_create(project_id = NULL, type = "search string",
+  languageAgnostic = FALSE, samplePercent = 100, languages = "en",
+  includedTerms = NULL, name = NULL, description = "My API query",
+  industry = "general", token = Sys.getenv("BW_TOKEN"))
 }
 \arguments{
-\item{token}{The authentication token, obtained using bwr_auth()}
-
 \item{project_id}{The project ID into which you'd like to insert a query}
 
 \item{type}{The type of query (e.g. 'search string')}
@@ -29,6 +27,8 @@ bwr_query_create(token = Sys.getenv("BW_TOKEN"), project_id = NULL,
 \item{description}{The description of the query}
 
 \item{industry}{The industry classification}
+
+\item{token}{The authentication token, obtained using bwr_auth()}
 }
 \value{
 Returns a list containing the JSON response from the server.

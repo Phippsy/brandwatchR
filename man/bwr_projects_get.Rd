@@ -4,15 +4,15 @@
 \alias{bwr_projects_get}
 \title{Get Brandwatch project data}
 \usage{
-bwr_projects_get(token = Sys.getenv("BW_TOKEN"), target = NULL)
+bwr_projects_get(target = NULL, token = Sys.getenv("BW_TOKEN"))
 }
 \arguments{
-\item{token}{The Brandwatch token, which will be automatically available via environment
-arguments provided you run bwr_auth() prior to any other functions.}
-
 \item{target}{(Optional) the target for your query. If not specified, results will include
 all available projects for the authenticated user and all available data for each project.
 If 'summary', results will be a more simplified list of projects and excludes richer data such as query links.}
+
+\item{token}{The Brandwatch token, which will be automatically available via environment
+arguments provided you run bwr_auth() prior to any other functions.}
 }
 \value{
 Returns a data frame of project data.

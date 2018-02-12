@@ -4,14 +4,14 @@
 \alias{bwr_cat_get}
 \title{Get a data frame of available categories for a given project}
 \usage{
-bwr_cat_get(token = Sys.getenv("BW_TOKEN"), project_id = NULL)
+bwr_cat_get(project_id = NULL, token = Sys.getenv("BW_TOKEN"))
 }
 \arguments{
-\item{token}{The auth token for this user, which should be generated
-into an environment variable using bwr_auth()}
-
 \item{project_id}{The project id you'd like to return all available categories for.
 Obtain a data frame of projects using bwr_get_projects()}
+
+\item{token}{The auth token for this user, which should be generated
+into an environment variable using bwr_auth()}
 }
 \value{
 Returns a dataframe of categories matching the project.

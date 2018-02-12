@@ -18,7 +18,7 @@ bwr_tag_get <- function(project_id = NULL, token = Sys.getenv("BW_TOKEN")) {
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
         stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
-    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric"))
+    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric", "integer"))
         stop("project_id must be a character or numeric vector of length one")
 
     url <- paste0("https://api.brandwatch.com/projects/", project_id, "/tags")
@@ -54,7 +54,7 @@ bwr_tag_create <- function(project_id = NULL, name = NULL, token = Sys.getenv("B
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
         stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
-    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric"))
+    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric", "integer"))
         stop("project_id must be a character or numeric vector of length one")
     if (is.null(name) || length(name) != 1 || !class(name) %in% c("character"))
         stop("name must be a character vector of length one")
@@ -95,9 +95,9 @@ bwr_tag_delete <- function(project_id, tag_id, token = Sys.getenv("BW_TOKEN")) {
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
         stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
-    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric"))
+    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric", "integer"))
         stop("project_id must be a character or numeric vector of length one")
-    if (is.null(tag_id) || length(tag_id) != 1 || !class(tag_id) %in% c("character", "numeric"))
+    if (is.null(tag_id) || length(tag_id) != 1 || !class(tag_id) %in% c("character", "numeric", "integer"))
         stop("tag_id must be a character or numeric vector of length one")
 
     url <- paste0("https://api.brandwatch.com/projects/", project_id, "/tags/", tag_id, "?access_token=", token)

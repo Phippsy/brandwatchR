@@ -4,18 +4,18 @@
 \alias{bwr_cat_create}
 \title{Upload a new category to Brandwatch}
 \usage{
-bwr_cat_create(token = Sys.getenv("BW_TOKEN"), project_id = NULL,
-  name = NULL, children = NULL)
+bwr_cat_create(project_id = NULL, name = NULL, children = NULL,
+  token = Sys.getenv("BW_TOKEN"))
 }
 \arguments{
-\item{token}{The authentication token, obtained using bwr_auth()}
-
 \item{project_id}{The project ID into which you'd like to insert a category}
 
 \item{name}{The name of the category}
 
 \item{children}{A list of lists (sorry!), each list defining the key-value pairs for name (mandatory) and
 id (optional) of each child subcategory.}
+
+\item{token}{The authentication token, obtained using bwr_auth()}
 }
 \value{
 Returns a list containing the JSON response from the server.

@@ -4,15 +4,15 @@
 \alias{bwr_querygrp_delete}
 \title{Delete a specified Brandwatch query group}
 \usage{
-bwr_querygrp_delete(token = Sys.getenv("BW_TOKEN"), project_id = NULL,
-  group_id = NULL)
+bwr_querygrp_delete(project_id = NULL, group_id = NULL,
+  token = Sys.getenv("BW_TOKEN"))
 }
 \arguments{
-\item{token}{The API authentication token, obtained using bwr_auth()}
-
 \item{project_id}{The project ID in which your target query group can be found.}
 
 \item{group_id}{The query group ID which you'd like to delete. Find out the list of query groups in a given project using bwr_querygrp_get().}
+
+\item{token}{The API authentication token, obtained using bwr_auth()}
 }
 \value{
 Returns a list of the JSON response from the server.

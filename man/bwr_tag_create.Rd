@@ -4,15 +4,15 @@
 \alias{bwr_tag_create}
 \title{Upload a new tag to Brandwatch}
 \usage{
-bwr_tag_create(token = Sys.getenv("BW_TOKEN"), project_id = NULL,
-  name = NULL)
+bwr_tag_create(project_id = NULL, name = NULL,
+  token = Sys.getenv("BW_TOKEN"))
 }
 \arguments{
-\item{token}{The authentication token, obtained using bwr_auth()}
-
 \item{project_id}{The project ID into which you'd like to insert a tag}
 
 \item{name}{The name of the tag}
+
+\item{token}{The authentication token, obtained using bwr_auth()}
 }
 \value{
 Returns a list containing the JSON response from the server.

@@ -4,12 +4,12 @@
 \alias{bwr_rule_get}
 \title{Get a data frame of available rules for a given project}
 \usage{
-bwr_rule_get(token = Sys.getenv("BW_TOKEN"), project_id = NULL)
+bwr_rule_get(project_id = NULL, token = Sys.getenv("BW_TOKEN"))
 }
 \arguments{
-\item{token}{The auth token for this user, which should be generated into an environment variable using bwr_auth()}
-
 \item{project_id}{The project id you'd like to return all available rules for. Obtain a data frame of projects using bwr_get_projects()}
+
+\item{token}{The auth token for this user, which should be generated into an environment variable using bwr_auth()}
 }
 \value{
 Returns a dataframe of rules matching the project. Due to the structure of the API response, some of the dataframe columns are list-columns (i.e. nested dataframes).

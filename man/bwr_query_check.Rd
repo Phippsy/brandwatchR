@@ -4,12 +4,12 @@
 \alias{bwr_query_check}
 \title{Validate a Brandwatch query}
 \usage{
-bwr_query_check(token = Sys.getenv("BW_TOKEN"), query = list())
+bwr_query_check(query = list(), token = Sys.getenv("BW_TOKEN"))
 }
 \arguments{
-\item{token}{The authentication token, acquired using bwr_auth()}
-
 \item{query}{A list containing named parameters: query and language.}
+
+\item{token}{The authentication token, acquired using bwr_auth()}
 }
 \value{
 Returns a list containing any errors or issues, if found

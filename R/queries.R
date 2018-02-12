@@ -23,7 +23,7 @@ bwr_query_get <- function(project_id = NULL, type = NULL, token = Sys.getenv("BW
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
         stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
-    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric"))
+    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric", "integer"))
         stop("project_id must be a character or numeric vector of length one")
 
 
@@ -108,7 +108,7 @@ bwr_query_create <- function(project_id = NULL, type = "search string", language
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
         stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
-    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric"))
+    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric", "integer"))
         stop("project_id must be a character or numeric vector of length one")
     if (class(type) != "character" || length(type) != 1)
         stop("type does not appear to be a character vector of length one")
@@ -160,9 +160,9 @@ bwr_query_delete <- function(project_id, query_id, token = Sys.getenv("BW_TOKEN"
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
         stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
-    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric"))
+    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric", "integer"))
         stop("project_id must be a character or numeric vector of length one")
-    if (is.null(query_id) || length(query_id) != 1 || !class(query_id) %in% c("character", "numeric"))
+    if (is.null(query_id) || length(query_id) != 1 || !class(query_id) %in% c("character", "numeric", "integer"))
         stop("query_id must be a character or numeric vector of length one")
 
     url <- paste0("https://api.brandwatch.com/projects/", project_id, "/queries/", query_id)

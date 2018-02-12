@@ -16,7 +16,7 @@ bwr_querygrp_get <- function(project_id = NULL, token = Sys.getenv("BW_TOKEN")) 
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
         stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
-    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric"))
+    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric", "integer"))
         stop("project_id must be a character or numeric vector of length one")
 
 
@@ -51,9 +51,9 @@ bwr_querygrp_delete <- function(project_id = NULL, group_id = NULL, token = Sys.
     # Check for valid arguments -----------------------------------------------
     if (length(token) != 1 || class(token) != "character")
         stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
-    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric"))
+    if (is.null(project_id) || length(project_id) != 1 || !class(project_id) %in% c("character", "numeric", "integer"))
         stop("project_id must be a character or numeric vector of length one")
-    if (is.null(group_id) || length(group_id) != 1 || !class(group_id) %in% c("character", "numeric"))
+    if (is.null(group_id) || length(group_id) != 1 || !class(group_id) %in% c("character", "numeric", "integer"))
         stop("group_id must be a character or numeric vector of length one")
 
     url <- paste0("https://api.brandwatch.com/projects/", project_id, "/querygroups/", group_id)
