@@ -1,37 +1,49 @@
 
 #' Get a list of mentions for the specified query and project
 #'
-#' @param project_id
-#' The project id in which the specified query is contained. Obtain a list of project IDs using bwr_get_projects().
-#' @param query_id
-#' The id of the query you'd like to run. Obtain a list of queries for any specified project using bwr_get_queries().
+#' Returns a data frame containing any results found for the specified query ID.
+#'
+#' @param project_id Numeric.
+#' The project id in which the specified query is contained.
+#'   Obtain a list of project IDs using bwr_get_projects().
+#' @param query_id Numeric
+#' The id of the query you'd like to run.
+#'   Obtain a list of queries for any specified project using bwr_get_queries().
 #' @param date_range
 #' A character vector containing 2 date values in YYYY-mm-dd format. The first value is the beginning of your desired date range and the second value is the end of the date range.
-#' @param page
-#' (Optional) The page number for which to return results. This is needed only when R needs to iterate through multiple pages of results from the Brandwatch API. It is recommended that you keep this value set as zero.
+#' @param page Numeric, optional.
+#' The page number for which to return results. This is needed only when R needs to iterate through multiple pages of results from the Brandwatch API. It is recommended that you keep this value set as zero.
 #' @param token
-#' The authentication token, acquired using bwr_auth()
+#' The authentication token, acquired using bwr_auth().
+#'   This token will be automatically obtained from the user's environment variable 'BW_TOKEN' and does not need to be provided.
 #' @param filters
 #' (Optional) A list of key-value pairs to filter the mentions query by. Use the bwr_filters_get() function to find out all available filters.
+#' @param order_by String.
+#' (Optional) The name of the metric you'd like to order your results by.
+#' @param order_direction String.
+#' Either 'asc' or 'desc', to specify ascending or descending order.
 #' @return
 #' Returns a data frame containing all results
 #' @export
 #'
 #' @examples
-#' my_project <- bwr_get_projects()$id[1]
-#' my_query <- bwr_get_queries(project_id = my_project)$id[1]
-#' my_mentions <- bwr_mentions_get(
-#' project_id = my_project,
-#' query_id = my_query,
-#' date_range = c("2018-01-01", "2018-02-01"))
+#' my_project <- bwr_projects_get()$id[1]
+#' my_query <- bwr_query_get(project_id = my_project)$id[1]
+#' my_mentions <- bwr_mentions_get(project_id = my_project, query_id = my_query, filters = list(gender = "female", sentiment = "neutral"), order_by = "sentiment", order_direction = "asc", date_range = c("2018-01-01", "2018-02-01"))
 #'
-bwr_mentions_get <- function(token = Sys.getenv("BW_TOKEN"),
-                             project_id = NULL,
+#' @seealso \code{\link{bwr_auth}} to authenticate, \code{\link{bwr_projects_get}} for a list of project IDs, \code{\link{bwr_query_get}} for all queries available in the specified project.
+#'   \code{\link{bwr_filters_get}} to get a list of available filters for the filters argument.
+#'
+bwr_mentions_get <- function(project_id = NULL,
                             query_id = NULL,
-                            filters= NULL,
                             date_range = c(Sys.Date()-31, Sys.Date()-1),
-                            page = NULL) {
-  print(paste("page = ", page))
+                            order_by = NULL,
+                            order_direction = NULL,
+                            filters= NULL,
+                            page = NULL,
+                            token = Sys.getenv("BW_TOKEN")) {
+  print(paste("Reading page index: ", ifelse(is.null(page), 0, page)))
+
   url <- paste0("https://api.brandwatch.com/projects/",
                 project_id,
                 "/data/mentions")
@@ -42,7 +54,9 @@ bwr_mentions_get <- function(token = Sys.getenv("BW_TOKEN"),
                               pageSize = 5000,
                               page = page,
                               access_token = token),
-                           filter))
+                           filter,
+                           orderBy = order_by,
+                           orderDirection = order_direction))
   httr::stop_for_status(r)
 
   # Parse the results and return

@@ -4,35 +4,49 @@
 \alias{bwr_mentions_get}
 \title{Get a list of mentions for the specified query and project}
 \usage{
-bwr_mentions_get(token = Sys.getenv("BW_TOKEN"), project_id = NULL,
-  query_id = NULL, filters = NULL, date_range = c(Sys.Date() - 31,
-  Sys.Date() - 1), page = NULL)
+bwr_mentions_get(project_id = NULL, query_id = NULL,
+  date_range = c(Sys.Date() - 31, Sys.Date() - 1), order_by = NULL,
+  order_direction = NULL, filters = NULL, page = NULL,
+  token = Sys.getenv("BW_TOKEN"))
 }
 \arguments{
-\item{token}{The authentication token, acquired using bwr_auth()}
+\item{project_id}{Numeric.
+The project id in which the specified query is contained.
+  Obtain a list of project IDs using bwr_get_projects().}
 
-\item{project_id}{The project id in which the specified query is contained. Obtain a list of project IDs using bwr_get_projects().}
-
-\item{query_id}{The id of the query you'd like to run. Obtain a list of queries for any specified project using bwr_get_queries().}
-
-\item{filters}{(Optional) A list of key-value pairs to filter the mentions query by. Use the bwr_filters_get() function to find out all available filters.}
+\item{query_id}{Numeric
+The id of the query you'd like to run.
+  Obtain a list of queries for any specified project using bwr_get_queries().}
 
 \item{date_range}{A character vector containing 2 date values in YYYY-mm-dd format. The first value is the beginning of your desired date range and the second value is the end of the date range.}
 
-\item{page}{(Optional) The page number for which to return results. This is needed only when R needs to iterate through multiple pages of results from the Brandwatch API. It is recommended that you keep this value set as zero.}
+\item{order_by}{String.
+(Optional) The name of the metric you'd like to order your results by.}
+
+\item{order_direction}{String.
+Either 'asc' or 'desc', to specify ascending or descending order.}
+
+\item{filters}{(Optional) A list of key-value pairs to filter the mentions query by. Use the bwr_filters_get() function to find out all available filters.}
+
+\item{page}{Numeric, optional.
+The page number for which to return results. This is needed only when R needs to iterate through multiple pages of results from the Brandwatch API. It is recommended that you keep this value set as zero.}
+
+\item{token}{The authentication token, acquired using bwr_auth().
+This token will be automatically obtained from the user's environment variable 'BW_TOKEN' and does not need to be provided.}
 }
 \value{
 Returns a data frame containing all results
 }
 \description{
-Get a list of mentions for the specified query and project
+Returns a data frame containing any results found for the specified query ID.
 }
 \examples{
-my_project <- bwr_get_projects()$id[1]
-my_query <- bwr_get_queries(project_id = my_project)$id[1]
-my_mentions <- bwr_mentions_get(
-project_id = my_project,
-query_id = my_query,
-date_range = c("2018-01-01", "2018-02-01"))
+my_project <- bwr_projects_get()$id[1]
+my_query <- bwr_query_get(project_id = my_project)$id[1]
+my_mentions <- bwr_mentions_get(project_id = my_project, query_id = my_query, filters = list(gender = "female", sentiment = "neutral"), order_by = "sentiment", order_direction = "asc", date_range = c("2018-01-01", "2018-02-01"))
 
+}
+\seealso{
+\code{\link{bwr_auth}} to authenticate, \code{\link{bwr_projects_get}} for a list of project IDs, \code{\link{bwr_query_get}} for all queries available in the specified project.
+  \code{\link{bwr_filters_get}} to get a list of available filters for the filters argument.
 }

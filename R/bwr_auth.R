@@ -1,17 +1,21 @@
 #' Authenticate with the Brandwatch API
 #'
+#' Authenticates using specified username and password.
+#' Also caches a local version of the authentication token unless otherwise specified.
+#'
 #' @param un
 #' Your Brandwatch Username
 #' @param pw
 #' Your Brandwatch Password
 #' @param refresh
-#' (Boolean) Should the token be refreshed? If no, a token will be read from a locally cached file '.bw_token' if this file is available.
-#' If no token is available, or the refresh argument is TRUE, a new token will be downloaded and cached from the API.
+#' (Boolean) Should the token be refreshed?
+#' If no, a token will be read from a locally cached file '.bw_token' if this file is available.
+#' If no token is available, or the refresh argument is TRUE, a new token will be requested and cached from the API.
 #'
-#' @param write_cache
+#' @param cache
 #' (Boolean) Can the token be locally cached?
 #' If TRUE, the token will be cached in the current working directory in '.bw_token'.
-#' If FALSE, the token will be not be cached locally but will be available for the current R session.
+#' If FALSE, the token will be not be cached locally.
 #'
 #' @return
 #' Your environment variable "BW_TOKEN" will be set to the value of your authentication token.

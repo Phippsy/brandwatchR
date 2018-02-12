@@ -58,7 +58,7 @@ This will return a data frame showing you the ID, name, created date and similar
 
 ## Get mentions for a query
 
-Finally, the fun stuff - we can now request all mentions for a given query, using a specified date range. We achieve that using the `bwr_get_mentions()` function.
+Finally, the fun stuff - we can now request all mentions for a given query, using a specified date range. We achieve that using the `bwr_mentions_get()` function.
 
 ```{r}
 my_mentions <- bwr_mentions_get(
@@ -113,3 +113,8 @@ You can find information about the mention field definitions within [Brandwatch'
 
 - `bwr_cat_get()` - get the categories for a specified project
 - `bwr_cat_create()`  - create a new category for a specified project
+
+#### Rules
+
+- `bwr_rule_get()` - get a data frame of all rules available within the specified project.
+- `bwr_rule_delete()` - delete a rule for a specified project and rule id
