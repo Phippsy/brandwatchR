@@ -131,3 +131,7 @@ You can find information about the mention field definitions within [Brandwatch'
 
 - `bwr_rule_get()` - get a data frame of all rules available within the specified project.
 - `bwr_rule_delete()` - delete a rule for a specified project and rule id
+
+#### Charts
+
+- `bwr_mentions_chart()` - get a data frame of chart-ready statistics for a specified query or query group.
