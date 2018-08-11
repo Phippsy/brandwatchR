@@ -1,12 +1,11 @@
 Package: brandwatchR
 Type: Package
-Title: Brandwatch API to R
-Version: 0.1.0
-Author: c(person("Donal", "Phipps", "donal.phipps@gmail.com", role = c("aut", "cre")))
+Title: 'Brandwatch' API to R
+Version: 0.3.0
+Authors@R: c(person("Donal", "Phipps", email = "donal.phipps@gmail.com", role = c("aut", "cre")))
 URL: https://github.com/Phippsy/brandwatchR
-BugReports: https://github.com/Phippsy/brandwatchR
-Maintainer: The package maintainer <donal.phipps@gmail.com>
-Description: Interact with the Brandwatch API <https://developers.brandwatch.com/docs>. 
+BugReports: https://github.com/Phippsy/brandwatchR/issues
+Description: Interact with the 'Brandwatch' API <https://developers.brandwatch.com/docs>. 
   Allows you to authenticate to the API and obtain data for projects, queries, query groups tags and categories.
   Also allows you to directly obtain mentions and aggregate data for a specified query or query group.
 License: MIT + file LICENSE

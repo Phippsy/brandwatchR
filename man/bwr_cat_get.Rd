@@ -21,5 +21,5 @@ See the Brandwatch documentation for more information
 at https://developers.brandwatch.com/docs/retrieving-categories.
 }
 \examples{
-\dontrun{my_categories <- bwr_cat_get(project_id = 12334534))}
+\dontrun{my_categories <- bwr_cat_get(project_id = 12334534)}
 }

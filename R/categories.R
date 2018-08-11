@@ -15,7 +15,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{my_categories <- bwr_cat_get(project_id = 12334534))}
+#' \dontrun{my_categories <- bwr_cat_get(project_id = 12334534)}
 bwr_cat_get <- function(project_id = NULL, token = Sys.getenv("BW_TOKEN")) {
     if (length(token) != 1 || class(token) != "character")
         stop("Token object does not appear to be a character vector of length one. Please re-run bwr_auth() to obtain a token")
