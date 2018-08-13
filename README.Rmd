@@ -14,6 +14,9 @@ knitr::opts_chunk$set(
 
 # brandwatchR
 
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/brandwatchR?color=brightgreen)](https://cran.r-project.org/package=brandwatchR)
+![](http://cranlogs.r-pkg.org/badges/brandwatchR?color=brightgreen)
+
 An API wrapper package for the [Brandwatch API](https://developers.brandwatch.com/docs/).
 
 If you're like me and you just want to get your hands on lots of lovely mention data, you do that by:
@@ -29,6 +32,12 @@ From here, you can retrieve mentions data using `bwr_get_mentions()`, which take
 
 ```r
 devtools::install_github("Phippsy/brandwatchR")
+```
+
+or install from CRAN, version 0.3.0
+
+```{r}
+install.packages('brandwatchR')
 ```
 
 ## Authenticate
