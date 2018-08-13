@@ -26,9 +26,6 @@ or install from CRAN, version 0.3.0
 
 ``` r
 install.packages('brandwatchR')
-#> Installing package into '/home/donal/R/x86_64-pc-linux-gnu-library/3.4'
-#> (as 'lib' is unspecified)
-#> Warning: package 'brandwatchR' is not available (for R version 3.4.4)
 ```
 
 Authenticate

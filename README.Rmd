@@ -36,7 +36,7 @@ devtools::install_github("Phippsy/brandwatchR")
 
 or install from CRAN, version 0.3.0
 
-```{r}
+```{r message = FALSE, warning = FALSE}
 install.packages('brandwatchR')
 ```
 
