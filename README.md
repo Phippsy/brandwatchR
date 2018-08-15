@@ -34,8 +34,8 @@ Authenticate
 Only username and password are mandatory. You can optionally specify `refresh = TRUE` to force the function to obtain a new token from the API. Otherwise it will read a cached local file if available. You can also optionally specify `cache = FALSE` if you prefer not to have your token cached locally. In this case, your token will be stored in a local environment variable and available for the current R session only.
 
 ``` r
-bwr_auth(username = "your@username.com",
-         password = "your_password",
+bwr_auth(un = "your@username.com",
+         pw = "your_password",
          refresh = TRUE,
          cache = TRUE)
 ```
